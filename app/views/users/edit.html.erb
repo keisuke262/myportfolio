@@ -1,0 +1,57 @@
+
+<div class="container" id="user-show">
+<div class="row">
+    <div class="col-10 offset-1">
+        <h1 class="text-center">Edit Profile</h1>
+        <%= form_with(model: @user, local: true) do |f| %>
+        <%= render 'layouts/error_messages', model: f.object %>
+            <div class="row">
+                <div class="col-3 offset-1">
+                    <% if @user.image? %>
+                        <%= image_tag @user.image.url %>
+                    <% else %>
+                        <%= image_tag "/assets/default.jpg", :size => '100×100' %>
+                    <% end %>
+                </div>
+                <div class="col-7">
+                    <%= @user.name%>
+                    <p class="change-pro">Change Profile Photo</p>
+                    <button type="button" class="btn btn-outline-secondary rounded-pill image-edit">
+                        <%= f.file_field :image, accept: 'image/jpeg, image/gif, image/png' %>
+                    </button>
+                </div>
+            </div>
+            <div class="name-edit row">
+                    <div class="col-3 offset-1">
+                        <%= f.label :name, 'Name' %>
+                    </div>
+                    <div class="col-7">
+                        <%= f.text_field :name, class: 'form-control' %>
+                    </div>
+            </div>
+            <div class="goal-edit row">
+                <div class="col-3 offset-1">
+                    <%= f.label :goal, 'Goal' %>
+                </div>
+                <div class="col-7">
+                    <%= f.text_field :goal, class: 'form-control' %>
+                </div>
+            </div>
+            <div class="achieve-edit row">
+                <div class="col-3 offset-1">
+                    <%= f.label :achieve, 'To achieve goal' %>
+                </div>
+                <div class="col-7">
+                    <%= f.text_field :achieve, class: 'form-control' %>
+                </div>
+            </div>
+            <div class="done-edit row">
+                <div class="col-7 offset-4">
+                    <%= f.submit 'Done', class: 'btn btn-primary' %>
+                    <%= link_to 'Cancel', webapp_toppages_path, class: 'btn btn-primary' %>
+                </div>
+            </div>
+        <% end %>
+    </div>
+</div>
+</div>

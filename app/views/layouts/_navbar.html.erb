@@ -1,0 +1,69 @@
+<header class="mb-4" id="header_bar">
+    <!-- 576px以上の画面幅(sm)のとき、メニューを表示する（それ未満なら折りたたむ）指定を追加 -->
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+        <!-- 画面左上に表示するサイト名のリンクとして適切な表示をするための指定を追加 -->
+        <% if logged_in? %>
+            <a class="navbar-brand" href="<%= webapp_toppages_path %>">NED</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+                <span class="navbar-toggler-icon">
+            </button>
+        <% else %>
+        <a class="navbar-brand" href="/">南山大学ESS</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+            <span class="navbar-toggler-icon">
+        </button>
+        <% end %>
+
+        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+                <% if logged_in? %>
+                    <li class="nav-item"><%= link_to 'Users', users_path, class: 'nav-link' %></li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown"><%= current_user.name %></a>
+                        <ul class="dropdown-menu dropdown-menu-right">  
+                            <li class="dropdown-item"><%= link_to 'Profile', user_path(current_user) %></li>
+                            <li class="dropdown-divider"></li>
+                            <li class="dropdown-item"><%= link_to 'Log out', logout_path, method: :delete, data: { confirm: "Are you sure you want to log out of NED?" } %></li>
+                        </ul>
+                    </li>
+                <% else %>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">セクション</a>
+                        <div class="dropdown-menu">
+                            <%= link_to certification_section_path, class: 'dropdown-item' do %>
+                            Certification
+                            <% end %>
+                            <%= link_to guide_section_path, class: 'dropdown-item' do %>
+                            Guide
+                            <% end %>
+                            <%= link_to debate_section_path, class: 'dropdown-item' do %>
+                            Debate
+                            <% end %>
+                            <%= link_to drama_section_path, class: 'dropdown-item' do %>
+                            Drama
+                            <% end %>
+                            <%= link_to speech_section_path, class: 'dropdown-item' do %>
+                            Speech
+                            <% end %>
+                            <%= link_to discussion_section_path, class: 'dropdown-item' do %>
+                            Discussion
+                            <% end %>
+                        </div>
+                    </li>
+                    <li class="nav-item"><%= link_to 'イベント一覧', event_path, class: 'nav-link' %></li>
+                    <li class="nav-item"><%= link_to '体験申し込み', new_inquiry_path, class: 'nav-link' %></li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">SNS</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="https://www.instagram.com/nanzan_ess/" class="btn-social-icon-instagram nav-link">
+                            <span class="btn-social-icon-instagram__square"><i class="fab fa-instagram fa-fw"></i></span>Instagram</a>
+                            <a class="dropdown-item" href="https://twitter.com/ess2019_" class="generic-anchor mr-1" target="_blank" title="Twitter" itemprop="significantLink"><i class="fab fa-twitter"></i>Twitter</a>
+                            <a class="dropdown-item" href="https://www.youtube.com/channel/UCu2yuaJ-ZYgwiG_0uXakg7g"　class="generic-anchor mr-1" target="_blank" title="Youtube" itemprop="significantLink"><i class="fab fa-youtube"></i>Youtube</a>
+                        </div>
+                    </li>
+                    <li class="nav-item"><%= link_to 'WebApp', nanzaness_originalwebapp_path, class: 'nav-link' %></li>
+                <% end %>
+            </ul>
+        </div>
+    </nav>
+</header>

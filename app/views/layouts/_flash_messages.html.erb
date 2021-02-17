@@ -1,0 +1,7 @@
+<!--flashはControllerからViewへメッセージを渡すための変数でありハッシュである。-->
+<!--message_typeの方にはdangerやsuccessなどが入り、Bootstrapによって色が変わる-->
+<!--全ページで表示したいからapplication.html.erbの中で、renderで呼び出している-->
+<!--このようにパーシャル化しているのはapplication.html.erbの方のコードを見やすくするためである。-->
+<% flash.each do |message_type , message| %>
+    <div class="alert alert-<%= message_type %>"><%= message %></div>
+<% end %>
