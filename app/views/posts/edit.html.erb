@@ -1,0 +1,21 @@
+<div class="container" id="user-show">
+    <div class="row">
+        <div class="col-12">
+            <h1 class="text-center">Edit Post</h1>
+            <%= form_with(model: @post, local: true) do |f| %>
+                <%= render 'layouts/error_messages', model: f.object %>
+                <%= f.text_field :content, class: 'form-control edit-content' %>
+                <div class="row">
+                    <div class="col-6 offset-6 col-sm-3 offset-sm-9">
+                        <%= f.submit 'Done' , class: 'btn btn-primary done'%>
+                        <%= link_to 'Cancel', webapp_toppages_path, class: 'btn btn-primary cancel' %>
+                    </div>
+                </div>
+            <% end %>
+        </div>
+    </div>
+</div>
+
+
+
+

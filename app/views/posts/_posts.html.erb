@@ -1,0 +1,41 @@
+<ul class="list-unstyled">
+<% posts.each do |post| %>
+  <li class="mb-3 row post-border">
+    <div class="col-3 offset-1 col-md-3 offset-sm-0 col-lg-4 ">
+      <% if post.user.image? %>
+        <%= image_tag post.user.image.url %>
+      <% else %>
+        <%= image_tag "/assets/default.jpg" %>
+      <% end %>
+    </div>
+    <div class="col-7 col-md-9 col-lg-8">
+      <span class="username"><%= link_to post.user.name, user_path(post.user)%></span><span class="text-muted ml-3">posted at <%= post.created_at %></span>
+  
+      <p class="black post-content"><%= post.content %><br></p>
+
+    <div class="row user-top">
+      <% if current_user == post.user %>
+      <div class="col-4">
+        <%= link_to "Delete", post, method: :delete, data: { confirm: "Are you sure you want to delete this Post ?" }, class: 'btn btn-danger btn-block' %>
+      </div>
+      <div class="col-4">
+        <%= link_to "Edit", edit_post_path(post), class: 'btn btn-info btn-block' %>
+      </div>
+      <% end %>
+      <% if current_user == post.user %>
+        <div class="col-4">
+          <%= render 'favorites/favorite_button', post: post %>
+        </div>
+      <% else %>
+        <div class="col-6 offset-3">
+          <%= render 'favorites/favorite_button', post: post %>
+        </div>
+      <% end %>
+    </div>
+  </li>
+<% end %>
+<%= paginate posts %>
+</ul>
+
+
+
