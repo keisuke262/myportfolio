@@ -1,14 +1,8 @@
 # frozen_string_literal: true
 
 class SessionsController < ApplicationController
-
-  #application.html.erbを適用せずに
-  #新たに作ったindex.html.erb(footer無し)を適用する
-  layout 'index'
-
   def index
   end
-
 
   def create
     # newからcreateに送られてくるフォームデータは:sessionの中に入っている
@@ -18,7 +12,7 @@ class SessionsController < ApplicationController
     password = params[:session][:password]
     if login(name, password)
       flash[:success] = 'Successfully logged in !'
-      redirect_to webapp_toppages_url
+      redirect_to toppage_url
     else
       flash.now[:danger] = 'Failed'
       render :new
@@ -45,4 +39,5 @@ class SessionsController < ApplicationController
     end
   end
 end
+
 

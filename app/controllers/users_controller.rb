@@ -4,10 +4,6 @@
 class UsersController < ApplicationController
   before_action :require_user_logged_in, only:[:index, :show, :edit, :followings, :followers]
   before_action :require_user_logged_in, only:[:index, :show, :edit, :favoritemicroposts]
- #application.html.erbを適用せずに
- #新たに作ったindex.html.erb(navとfooter無し)を適用する
- layout 'index'
-
 
   def index
     # ページネーションを適用させるためにpage(params[:page])をつけている
@@ -35,7 +31,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params1)
 
     if @user.save
-      flash[:success] = 'Welcome to NED !'
+      flash[:success] = 'Welcome to FSP !'
       redirect_to login_path
     else
       flash.now[:danger] = 'Failed'
@@ -52,7 +48,7 @@ def update
 
   if @user.update(user_params)
     flash[:success] = 'Your profile is updated'
-    redirect_to webapp_toppages_url
+    redirect_to toppage_url
   else
     flash.now[:danger] = 'Failed '
     render :edit
@@ -107,7 +103,5 @@ end
   def user_params1
     params.require(:user).permit(:name, :password, :password_confirmation)
   end
-
-  
 end
 

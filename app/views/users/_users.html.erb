@@ -11,7 +11,7 @@
                             <% if user.image? %>
                                 <%= image_tag user.image.url %>
                             <% else %>
-                                <%= image_tag "/assets/default.jpg" %>
+                                <%= image_tag "/assets/default.png" %>
                             <% end %>
                             <span class="like-button"><%= render 'relationships/follow_button', user: user %></span>
                             <h1><%= user.name %></h1>
@@ -27,6 +27,7 @@
         <%= paginate users %>
     </div>
 <% end %>
+
 
 
 

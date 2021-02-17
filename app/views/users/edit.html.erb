@@ -10,7 +10,7 @@
                     <% if @user.image? %>
                         <%= image_tag @user.image.url %>
                     <% else %>
-                        <%= image_tag "/assets/default.jpg", :size => '100×100' %>
+                        <%= image_tag "/assets/default.png", :size => '100×100' %>
                     <% end %>
                 </div>
                 <div class="col-7">
@@ -48,10 +48,11 @@
             <div class="done-edit row">
                 <div class="col-7 offset-4">
                     <%= f.submit 'Done', class: 'btn btn-primary' %>
-                    <%= link_to 'Cancel', webapp_toppages_path, class: 'btn btn-primary' %>
+                    <%= link_to 'Cancel', toppage_path, class: 'btn btn-primary' %>
                 </div>
             </div>
         <% end %>
     </div>
 </div>
 </div>
+

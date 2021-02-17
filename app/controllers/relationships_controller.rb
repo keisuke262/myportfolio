@@ -5,14 +5,14 @@ class RelationshipsController < ApplicationController
     user = User.find(params[:follow_id])
     current_user.follow(user)
     flash[:success] = 'Followed user.'
-    redirect_to webapp_toppages_url
+    redirect_to toppage_url
   end
 
   def destroy
     user = User.find(params[:follow_id])
     current_user.unfollow(user)
     flash[:success] = 'Unfollowed user.'
-    redirect_to webapp_toppages_url
+    redirect_to toppage_url
   end
 end
 

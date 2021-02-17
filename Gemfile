@@ -69,3 +69,5 @@ gem 'carrierwave'
 
 # minimagick(画像のresize)
 gem 'mini_magick'
+
+
