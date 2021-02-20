@@ -47,11 +47,11 @@ test:
 # DatabaseはコンテナのでデータベースではなくてHost側のを使う
 # HerokuのPostgreSQLを使用
 
-production:
-  url: <%= ENV['DATABASE_URL'] %>
-#
 #production:
-# <<: *default
-#  database: ess_production
-#  username: ess
-#  password: <%= ENV['ESS_DATABASE_PASSWORD'] %>
+# url: <%= ENV['DATABASE_URL'] %>
+#
+production:
+ <<: *default
+database: ess_production
+username: ess
+password: <%= ENV['ESS_DATABASE_PASSWORD'] %>
