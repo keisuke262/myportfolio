@@ -40,6 +40,10 @@ gem 'bootsnap', '>= 1.1.0', require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
+  #コードの解析と整形をしてくれるrubocop
+  gem 'rubocop'
+  # railsのテスト環境のrspec
+  gem 'rspec-rails'
 end
 
 group :development do
@@ -51,8 +55,6 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
   # ActionMailer内容を開発(ローカル)環境でも確認できるようにする
   gem 'letter_opener_web'
-  # rubocop導入
-  gem 'rubocop', require: false
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
@@ -69,5 +71,7 @@ gem 'carrierwave'
 
 # minimagick(画像のresize)
 gem 'mini_magick'
+
+
 
 
