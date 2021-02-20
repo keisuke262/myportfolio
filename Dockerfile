@@ -10,4 +10,5 @@ RUN apt-get update  -qq && \
 WORKDIR /ess 
 COPY Gemfile Gemfile.lock /ess/
 RUN bundle install
-CMD [ "rails", "server", "-b", "0.0.0.0"]
+
+
