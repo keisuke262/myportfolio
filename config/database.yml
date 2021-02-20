@@ -44,11 +44,14 @@ test:
 #
 # You can use this database configuration with:
 #
-#   production:
-#     url: <%= ENV['DATABASE_URL'] %>
-#
+# DatabaseはコンテナのでデータベースではなくてHost側のを使う
+# HerokuのPostgreSQLを使用
+
 production:
-  <<: *default
-  database: ess_production
-  username: ess
-  password: <%= ENV['ESS_DATABASE_PASSWORD'] %>
+  url: <%= ENV['DATABASE_URL'] %>
+#
+#production:
+# <<: *default
+#  database: ess_production
+#  username: ess
+#  password: <%= ENV['ESS_DATABASE_PASSWORD'] %>
