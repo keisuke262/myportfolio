@@ -2,11 +2,11 @@ version: 2
 jobs:
   build:
     docker:
-    - image: circleci/ruby:2.5.3-node-browsers
+    - image: circleci/ruby:2.5.3
       environment:
         - BUNDLER_VERSION: 2.0.2
         - RAILS_ENV: 'test'
-    - image: circleci/mysql:8.0-ram
+    - image: circleci/mysql:5.7-ram
       environment:
         - MYSQL_ALLOW_EMPTY_PASSWORD: 'true'
         - MYSQL_ROOT_HOST: '127.0.0.1'
@@ -40,8 +40,8 @@ jobs:
     - run:
         name: Databasesetup
         command: |
-           bundle exec rails db:create
-           bundle exec rails db:schema:load
+           bundle exec rake db:create
+           bundle exec rake db:schema:load
 
     # run tests!
     - run:
