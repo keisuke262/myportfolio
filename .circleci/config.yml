@@ -7,9 +7,9 @@ jobs:
         RAILS_ENV: test
         MYSQL_HOST: 127.0.0.1
         MYSQL_USERNAME: 'root'
-        MYSQL_PASSWORD: ''
+        MYSQL_PASSWORD: '' 
         MYSQL_PORT: 3306
-    - image: circleci/mysql8.0-ram
+    - image: circleci/mysql5.7-ram
       environment:
         MYSQL_DATABASE: ess_test
         MYSQL_ALLOW_EMPTY_PASSWORD: true
