@@ -10,14 +10,12 @@ jobs:
     - image: circleci/mysql:8.0-ram
       command: --default-authentication-plugin=mysql_native_password
       environment:
+         MYSQL_ALLOW_EMPTY_PASSWORD: 'true'
          MYSQL_HOST: 127.0.0.1
          MYSQL_USERNAME: root
-         MYSQL_PASSWORD: password
          MYSQL_ROOT_PASSWORD: password
-         MYSQL_PORT: 3306
          MYSQL_DATABASE: ess_test
-         MYSQL_ROOT_HOST: '%'
-
+  
     working_directory: ~/ess  
   
 
