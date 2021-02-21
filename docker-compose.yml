@@ -22,8 +22,8 @@ services:
     image: mysql:8.0
     command: --default-authentication-plugin=mysql_native_password
     environment: 
-      MYSQL_USER: <%= ENV.fetch("MYSQL_PASSWORD", "password") %>
-      MYSQL_ROOT_PASSWORD: <%= ENV.fetch("MYSQL_PASSWORD", "password") %>
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: root
     volumes:
       - 'db-data:/var/lib/mysql'
     
