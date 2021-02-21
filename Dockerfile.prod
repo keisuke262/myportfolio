@@ -3,7 +3,7 @@ RUN apt-get update  -qq && \
     apt-get install -y \
     build-essential \
     libpq-dev \
-    nodejs 
+    nodejs
 
 WORKDIR /ess 
 COPY Gemfile Gemfile.lock /ess/

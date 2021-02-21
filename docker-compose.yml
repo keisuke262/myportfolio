@@ -13,6 +13,9 @@ services:
       - '.:/ess'
     tty: true
     stdin_open: true
+    environment:
+      RAILS_ENV: development
+      DATABASE_URL: mysql2
     depends_on: 
       - db
     links:
@@ -22,8 +25,10 @@ services:
     image: mysql:8.0
     command: --default-authentication-plugin=mysql_native_password
     environment: 
+      MYSQL_HOST: 127.0.0.1
       MYSQL_ROOT_PASSWORD: password
-      MYSQL_DATABASE: root
+      MYSQL_DATABASE: ess_development
+      MYSQL_USERNAME: root
     volumes:
       - 'db-data:/var/lib/mysql'
     
