@@ -48,8 +48,8 @@ test:
 # DatabaseはコンテナのでデータベースではなくてHost側のを使う
 # HerokuのPostgreSQLを使用
 
-# production:
-# url: <%= ENV['DATABASE_URL'] %>
+production:
+ url: <%= ENV['DATABASE_URL'] %>
 
 
 #production:
@@ -58,8 +58,8 @@ test:
 # username: ess
 # password: <%= ENV['ESS_DATABASE_PASSWORD'] %>
 
- production:
- <<: *default
- adapter: postgresql
- encoding: unicode
- pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+# production:
+# <<: *default
+# adapter: postgresql
+# encoding: unicode
+# pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
