@@ -1,27 +1,26 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
   <head>
     <meta charset="utf-8">
     <!-- 古いInternet Explorerでデザインが崩れるのを防ぐ-->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!---幅をデバイスの幅に合わせてレスポンシブデザインにする-->
-    <meta name="viewport" coStent="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="英語日記BOYからアイデアを得て、英語のスピーキングに焦点を当てたWebアプリケーションです。">
-    <title>FSP</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="英語日記BOYからアイデアを得た、今後使うであろう英会話フレーズを共有できるサービスです。">
+    <title>SPEnglish</title>
     <!--セキュリティ対策(WebAppliction作成時のdefault)-->
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <!--ress(リセットCSSを読み込む)-->
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <!--GoogleFonts-->
+    <link href="https://fonts.googleapis.com/css?family=Philosopher" rel="stylesheet">
     <!--Bootstrap CSS-->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <!--CSS, Javascriptの両方を読み込む(WebAppliction作成時のdefault)-->
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <!--Bootstrapに必要-->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
-    <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js"></script>
-    <!--FontAwesomを使うため-->
+    <!--FontAwesomeを使うため-->
     <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
     <!--animate.cssを読み込む(cdn)-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.css">
@@ -55,6 +54,12 @@
         return false;
       });
     </script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS, then Font Awesome -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js"></script>
   </body>　
 </html>
 

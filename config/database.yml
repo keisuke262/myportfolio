@@ -53,7 +53,7 @@ production:
 
 
 #production:
-#<<: *default
+# <<: *default
 # database: ess_production
 # username: ess
 # password: <%= ENV['ESS_DATABASE_PASSWORD'] %>

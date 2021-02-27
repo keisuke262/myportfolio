@@ -3,13 +3,13 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.5.3'
+ruby '2.5.8'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.4.5'
 # Use mysql as the database for Active Record
-gem 'mysql2', '>= 0.4.4', '< 0.6.0'
-gem 'pg'
+gem 'mysql2', '>= 0.4.4', '< 0.6.0', groups: %w(test development), require: false
+gem 'pg', '~> 0.19.0', group: :production, require: false
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
@@ -41,7 +41,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
-  #rubocop
+  #rubocop 
   gem 'rubocop'
   # railsのテスト環境のrspec
   gem 'rspec-rails'
@@ -64,9 +64,6 @@ gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 # ページネーションを追加するため
 gem 'kaminari'
 
-# slickによるCarousel実装に必要
-gem 'jquery-rails'
-
 # Userの画像アップロード用
 gem 'carrierwave'
 
@@ -75,7 +72,6 @@ gem 'mini_magick'
 
 # テストデータ作成のためにfactory_bot_railsをインストール
 gem 'factory_bot_rails'
-
 
 
 
