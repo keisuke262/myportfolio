@@ -73,5 +73,8 @@ gem 'mini_magick'
 # テストデータ作成のためにfactory_bot_railsをインストール
 gem 'factory_bot_rails'
 
+# couldn't find file 'jquery' with type 'application/javascript'というエラーのデバックのため
+gem 'jquery-rails'
+
 
 
