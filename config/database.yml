@@ -59,7 +59,7 @@ test:
 # password: <%= ENV['ESS_DATABASE_PASSWORD'] %>
 
 production:
- <<: *default
+  <<: *default
   adapter: postgresql
   encoding: unicode
   pool: 5
