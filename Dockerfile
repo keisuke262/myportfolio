@@ -8,5 +8,8 @@ RUN apt-get update  -qq && \
 WORKDIR /ess 
 COPY Gemfile Gemfile.lock /ess/
 RUN bundle install
+COPY . . 
+CMD ["rails" "s"]
+
 
 
