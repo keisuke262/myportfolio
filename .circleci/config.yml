@@ -64,13 +64,10 @@ jobs:
         destination: test-results 
   deploy:
     executor: heroku/default
-    parameters:
-      app-name:
-        default: $HEROKU_APP_NAME
-      post-deploy:
-        default:
-          - run:
-            command: heroku run rails db:migrate --app $HEROKU_APP_NAME
+    post-deploy:
+      default:
+        - run:
+          command: heroku run rails db:migrate --app $HEROKU_APP_NAME
     steps:
       - checkout
       - heroku/install
