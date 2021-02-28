@@ -75,6 +75,7 @@ gem 'factory_bot_rails'
 
 # couldn't find file 'jquery' with type 'application/javascript'というエラーのデバックのため
 gem 'jquery-rails'
+gem 'jquery-ui-rails'
 
 
 
