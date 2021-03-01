@@ -4,9 +4,9 @@
   <li class="mb-3 row post-border">
     <div class="col-3 offset-1 col-md-3 offset-sm-0 col-lg-4 ">
       <% if post.user.image? %>
-        <%= image_tag post.user.image.url %>
+        <%= image_tag post.user.image.url, alt: 'profile画像' %>
       <% else %>
-        <%= image_tag "/assets/default.jpg" %>
+        <%= image_tag "/assets/default.png", alt: 'profile画像' %>
       <% end %>
     </div>
     <div class="col-7 col-md-9 col-lg-8">

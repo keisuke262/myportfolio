@@ -28,6 +28,11 @@ body {
   /* 行の高さの指定 */
   line-height: 1.7;
   color: #432;
+  background-color: rgb(242, 242, 242)
+}
+
+.portfolio {
+  background-color: white;
 }
 
 a {
@@ -35,9 +40,437 @@ a {
   color: #432;
 }
 
-/* モバイル版 */
 
-@media (min-width: 0px) {
+a:hover {
+  text-decoration: none;
+}
+
+p {
+  margin-bottom: 60px;
+  padding: 0 40px;
+  font-size: 23px;
+}
+
+img {
+  /* 画像が親要素よりも大きくなるのを防ぐ */
+  max-width: 100%;
+  margin: 30px 0;
+}
+
+/* Header */
+.logo {
+  width: 180px;
+  /* 画像を円形にする設定 */
+  border-radius: 50%;
+  margin: 14px 15px 0 14px;
+}
+
+.main-nav {
+  /* <li>タグを横並びにする */
+  display: flex; 
+  font-size: 1.25rem;
+  /* 文字を大文字にする */
+  text-transform: uppercase;
+  margin-top: 74px;
+  margin-right: 100px;
+  list-style: none;
+}
+
+.main-nav li {
+  margin-left: 36px;
+}
+
+.main-nav a {
+  color: #432;  
+}
+
+.main-nav a:hover {
+  color: #0bd;
+  text-decoration: none
+}
+
+.page-header {
+  /* 横並びの設定 */
+  display: flex;
+  /* 両端に設置する設定 */
+  justify-content: space-between;
+}
+
+.logo-title a:hover {
+  text-decoration: none;
+  color: #432;
+}
+
+.wrapper {
+  max-width: 1100px;
+  /* 中央に配置する設定 */ 
+  margin: 0 auto;
+  /* スマートフォンなどの横幅が狭いデバイス用の余白の設定 */
+  padding: 0 4%;
+}
+
+/* Login後のnavbar */
+
+.navbar-brand {
+  font-size: 25px;
+  padding-left: 30px;
+  padding-right: 28px;
+}
+
+/* navの設定=固定 */
+.navbar {
+  position: fixed;
+  position: -webkit-fixed;
+  top: 0%;
+  width: 100%;
+  z-index: 100;
+  padding: 1rem;
+ }
+
+/* Home */
+.home-content {
+  text-align: center;
+  margin-top: 10%;
+}
+
+.home-content p {
+  font-size: 1.125rem;
+  margin: 10px 0 42px;
+}
+
+.page-title {
+  font-size: 5rem;
+  font-family: 'Philosopher', selif;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+
+.big-bg {
+  /* 画像の縦横の比率を保ちながら画面いっぱいに広げる設定 */
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+} 
+
+#home {
+  background-image: url('coffee.jpg');
+  /* 画面の表示領域の高さいっぱいに画像を広げる */
+  min-height: 100vh;
+}
+
+
+#home .page-title {
+  text-transform: none;
+}
+
+h2 {
+  padding-bottom: 40px;
+}
+
+.problem {
+  padding-top: 100px;
+}
+
+.solution {
+  padding-top: 100px
+}
+
+.function {
+  padding-top: 100px;
+}
+
+.after-reading { 
+  margin-top: 200px;
+}
+
+.after-problem {
+  margin-top: 160px;
+}
+
+.after-solution {
+  margin-top: 160px;
+}
+
+.after-function {
+  margin-top: 120px;
+}
+
+
+/* Signup */
+h1 {
+  font-size: 30px;
+} 
+.account {
+  padding-top: 333px;
+}
+
+.form {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.btn {
+  font-size: 23px;
+}
+
+.signup {
+  margin-top: 3rem;
+  border-radius: 50px;
+}
+
+.name {
+  margin-top: 50px; 
+}
+
+.password {
+  margin-top: 3rem;
+}
+
+.passwordcon {
+  margin-top: 3rem;
+}
+
+/* Log in */
+
+.login {
+  margin-top: 3rem;
+  border-radius: 50px;
+}
+
+
+/* flashメッセージ */
+
+.alert-success {
+  color: #155724;
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+  margin-top: 145px;
+  margin-bottom: -180px;
+  margin-right: 200px;
+  margin-left: 200px;
+}
+
+.alert-danger {
+  
+  margin-top: 60px;
+  margin-bottom: -45px;
+  margin-right: 200px;
+  margin-left: 200px;
+}
+
+/* User-toppage */
+
+.content1 h5 {
+  margin-top: 30px;
+}
+
+h5 {
+  font-size: 2.3rem;
+}
+
+/* post */
+
+.c-modal_content {
+  background: #fff;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 5px;
+  width: 50%;
+}
+
+/* ドロップダウンの文字 */
+
+.dropdown-item {
+  font-size: 18px;
+}
+
+.nav-link {
+  font-size: 18px;
+}
+
+/* User */
+
+#user-show img {
+  /* 円形にする */
+  border-radius: 50%;
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+}
+   
+.user-profile{
+  width: 300px;
+  padding:2em;
+  background:#fff;
+  border:#ddd 5px solid;
+  border-radius:10px;
+  margin-top: 30px;
+}
+
+.user-profile img{
+  width:100%;
+  height:auto;
+  border-radius:30px 0;
+  margin-left: 30px;
+}
+
+/* Desktop版ここまで */
+
+
+/* iPadPro版 */
+
+@media (max-width: 1025px) {
+
+  /* Header */
+  .main-nav {
+    /* <li>タグを横並びにする */
+    display: flex; 
+    font-size: 1.25rem;
+    /* 文字を大文字にする */
+    text-transform: uppercase;
+    margin-top: 74px;
+    margin-right: 100px;
+    list-style: none;
+  }
+
+  .after-reading {
+    margin-top: 100px;
+  }
+
+  .after-problem {
+    margin-top: 70px;
+  }
+
+  .img-top2 {
+    margin-top: 45px;
+  }
+
+  .img-top3 {
+    margin-top: 250px;
+  }
+
+  .img-top4 {
+    margin-top: 145px;
+  }
+
+  .alert-success {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+    margin-top: 110px;
+    margin-bottom: -270px;
+    margin-right: 200px;
+    margin-left: 200px;
+  } 
+  
+  .alert-danger {
+    
+    margin-top: 60px;
+    margin-bottom: -45px;
+    margin-right: 200px;
+    margin-left: 200px;
+  }
+
+  /* post */
+
+  .c-modal_content {
+    background: #fff;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+    width: 60%;
+  }
+
+  /* User */
+   
+  .user-profile{
+    width: 300px;
+    padding:2em;
+    background:#fff;
+    border:#ddd 5px solid;
+    border-radius:10px;
+    margin-top: 30px;
+  }
+}
+ 
+/* iPadPro版ここまで */
+
+/* iPad版 */
+
+@media (max-width: 800px) {
+
+  /* Header */
+  .main-nav {
+    /* <li>タグを横並びにする */
+    display: flex; 
+    font-size: 1.25rem;
+    /* 文字を大文字にする */
+    text-transform: uppercase;
+    margin-top: 74px;
+    margin-right: 100px;
+    list-style: none;
+  }
+
+  .after-reading {
+    margin-top: 100px;
+  }
+
+  .after-problem {
+    margin-top: 70px;
+  }
+
+  .img-top3 {
+    margin-top: 100px;
+  }
+
+  .alert-success {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+    margin-top: 110px;
+    margin-bottom: -270px;
+    margin-right: 200px;
+    margin-left: 200px;
+  }
+  
+  .alert-danger {
+    
+    margin-top: 60px;
+    margin-bottom: -45px;
+    margin-right: 200px;
+    margin-left: 200px;
+  }
+
+  /* User */
+
+  #user-show img {
+    /* 円形にする */
+    border-radius: 50%;
+    width: 160px;
+    height: 160px;
+    margin-left: 0px;
+  }
+
+  .user-profile{
+    width: 230px;
+    padding:2em;
+    background:#fff;
+    border:#ddd 5px solid;
+    border-radius:10px;
+    margin-top: 20px;
+  }
+
+}
+
+/* iPad版ここまで */
+
+/* mobile版 */
+
+@media (max-width: 600px) {
 
   p {
     margin-bottom: 40px;
@@ -53,6 +486,7 @@ a {
   .main-nav {
     font-size: 1rem;
     margin-top: 10px;
+    margin-right: 0px
   }
 
   .main-nav li {
@@ -64,6 +498,16 @@ a {
     margin-top: 20%;
   }
 
+  .home-content p {
+    font-size: 1.125rem;
+    margin: 135px 0 42px;
+  }
+
+  #home .page-title {
+    text-transform: none;
+    margin-top: -55px;
+  }
+
   /* logoとnavigation-menuを縦に並べる */
   .page-header {
     /* 要素を縦並びにする設定 */
@@ -72,22 +516,53 @@ a {
     align-items: center;
   }
 
-  #home {
-    background-image: url('topimg.jpg');
-    /* 画面の表示領域の高さいっぱいに画像を広げる */
-    min-height: 100vh;
-    /*
-    background-color: #0bd;
-    background-blend-mode: hard-light;
-    */
+  h2 {
+    padding-bottom: 40px;
+  }
+
+  .problem {
+    padding-top: 40px;
+  }
+
+  .solution {
+    padding-top: 40px;
+  }
+
+  .function { 
+    padding-top: 40px;
+  }
+
+  .after-reading { 
+    margin-top: 20px;
+  }
+  
+  .after-problem {
+    margin-top: 20px;
+  }
+  
+  .after-solution {
+    margin-top: 20px;
+  }
+  
+  .after-function {
+    margin-top: 20px;
+  }
+
+  .img-top3 {
+    margin-top: 50px;
+  }
+
+  .img-top4 {
+    margin-top: 60px;
   }
 
   /* Signup */
   h1 {
     font-size: 25px;
   }
+  
   .account {
-    padding-top: 60px;
+    padding-top: 200px; 
   }
 
   .form {
@@ -102,131 +577,90 @@ a {
   .name {
     margin-top: 45px;
   }
+
+  /* flashメッセージ */
+
+  .alert-success {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+    margin-top: 95px;
+    margin-bottom: -305px;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+
+  .alert-danger {
+    margin-top: 25px;
+    margin-bottom: -23px;
+    margin-right: 70px;
+    margin-left: 80px; 
+  }
+
+  /* Login後のnavbar */
+  /* navの設定=固定 */
+.navbar {
+  position: fixed;
+  position: -webkit-fixed;
+  top: 0%;
+  width: 100%;
+  z-index: 100;
+ }
+
+ /* post */
+
+ .post p {
+   padding-left: 20px;
+   padding-right: 20px;
+   font-weight: bold;
+ }
+
+ .c-modal_content {
+  background: #fff;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 5px;
+  width: 85%;
+  }
+
+  #user-show img {
+    /* 円形にする */
+    border-radius: 50%;
+    width: 160px;
+    height: 160px;
+    margin-left: 0px;
+  }
+
+  .user-profile{
+    width: 210px;
+    padding: 20px;
+    background:#fff;
+    border:#ddd 5px solid;
+    border-radius: 50px;
+    margin-top: 30px;
+  }
+
+  .user-profile img{
+    width:100%;
+    height:auto;
+    border-radius:30px 0;
+    margin-left: 30px;
+  }
+
 }
 
-/* タブレット・PC用 */
-@media (min-width: 600px) {
+/* mobile版ここまで */
 
-  p {
-    margin-bottom: 60px;
-    padding: 0 40px;
-    font-size: 18px;
-  }
-
-
-  img {
-    /* 画像が親要素よりも大きくなるのを防ぐ */
-    max-width: 100%;
-    margin: 30px 0;
-  }
-
-  /* Header */
-  .logo {
-    width: 180px;
-    /* 画像を円形にする設定 */
-    border-radius: 50%;
-    margin: 14px 15px 0 14px;
-  }
-
-  .main-nav {
-    /* <li>タグを横並びにする */
-    display: flex; 
-    font-size: 1.25rem;
-    /* 文字を大文字にする */
-    text-transform: uppercase;
-    margin-top: 74px;
-    list-style: none;
-  }
-
-  .main-nav li {
-    margin-left: 36px;
-  }
-
-  .main-nav a {
-    color: #432;  
-  }
-
-  .main-nav a:hover {
-    color: #0bd;
-    text-decoration: none
-  }
-
-  .page-header {
-    /* 横並びの設定 */
-    display: flex;
-    /* 両端に設置する設定 */
-    justify-content: space-between;
-  }
-
-  .logo-title a:hover {
-    text-decoration: none;
-    color: #432;
-  }
-
-  .wrapper {
-    max-width: 1100px;
-    /* 中央に配置する設定 */ 
-    margin: 0 auto;
-    /* スマートフォンなどの横幅が狭いデバイス用の余白の設定 */
-    padding: 0 4%;
-  }
-
-  /* Home */
-  .home-content {
-    text-align: center;
-    margin-top: 10%;
-  }
-
+@media (max-width: 400px) {
   .home-content p {
     font-size: 1.125rem;
-    margin: 10px 0 42px;
-  }
-
-  .page-title {
-    font-size: 5rem;
-    font-family: 'Philosopher', selif;
-    text-transform: uppercase;
-    font-weight: normal;
-  }
-
-  .big-bg {
-    /* 画像の縦横の比率を保ちながら画面いっぱいに広げる設定 */
-    background-size: cover;
-    background-position: center top;
-    background-repeat: no-repeat;
-  } 
-
-  #home {
-    background-image: url('topimg.jpg');
-    /* 画面の表示領域の高さいっぱいに画像を広げる */
-    min-height: 100vh;
-  }
-
-  #home .page-title {
-    text-transform: none;
-  }
-
-  /* Signup */
-  h1 {
-    font-size: 30px;
-  }
-  .account {
-    padding-top: 100px;
-  }
-
-  .form {
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-
-  .btn {
-    font-size: 23px;
-  }
-
-  .name {
-    margin-top: 50px; 
+    margin: 83px 0 42px;
   }
 }
+
+
 
 
 .container #main {
@@ -252,18 +686,6 @@ a {
 }
 
 @media only screen and (min-width: 992px) {
-    .navbar-dark .navbar-brand {
-        margin-left: 20rem;
-    }
-}
-
-@media only screen and (min-width: 576px) {
-    .navbar-dark .navbar-brand {
-        margin-left: 4.1rem;
-    }
-}
-
-@media only screen and (min-width: 992px) {
     .login-nav {
         margin-right: 20rem;
     }
@@ -276,9 +698,7 @@ a {
 }
 
 
-.navbar-brand {
-  font-size: 2.8rem;
-}
+
 
 .col-sm-8 {
   width: 66.66667%;
@@ -328,18 +748,6 @@ li {
   color: #00BFFF;
   cursor: pointer;
 }
-
-@media only screen and (min-width: 0px) {
-  h5 {
-    font-size: 4rem;
-  }
- }
-
- @media only screen and (min-width: 576px) {
-  h5 {
-    font-size: 2.3rem;
-  }
- }
 
  @media only screen and (min-width: 0px) {
  .mb-5 {
@@ -438,155 +846,15 @@ li {
  }
 }
 
-/* ドロップダウンの文字の設定 */
-@media only screen and (min-width: 0px) {
-  .dropdown-item {
-    font-size: 3rem;
-  }
-}
-
-@media only screen and (min-width: 576px) {
-  .dropdown-item {
-    font-size: 2rem;
-  }
-}
-
-@media only screen and (min-width: 576px) {
-  .nav-link {
-    font-size: 3rem;
-  }
-}
-
-@media only screen and (min-width: 576px) {
-  .nav-link {
-    font-size: 2rem;
-  }
-}
-
-@media (min-width: 0px) {
-  /* ウインドウ幅500px以下の時に適用されるスタイル */
-  
-/* navの設定=固定 */
-.navbar {
-  position: fixed;
-  position: -webkit-fixed;
-  top: 0%;
-  width: 100%;
-  z-index: 100;
-  padding: 1.8rem;
- }
-}
-
-@media (min-width: 576px) {
-  /* ウインドウ幅576px以上の時に適用されるスタイル */
-  
-/* navの設定=固定 */
-.navbar {
-  position: fixed;
-  position: -webkit-fixed;
-  top: 0%;
-  width: 100%;
-  z-index: 100;
-  padding: 1rem;
- }
-}
 
 
-/* ここからLoginページの設定 */
-
-/* フルスクリーン画像の設定 */
-
-.topimg2 {
-  width: 100%;
-  height: 100vh;
-  background-image: url(loginimage1.jpg);
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  
-}
-
-/* 画像上の中央に文字を設置する設定 */
-
-.topimg2 {
-  position: relative;
-}
-
-.title  {
-  position: absolute;
-  color: white;
-  font-weight: bold;
-  /* Appleと同じフォントの種類を指定 */
-  font-family:"SF Pro Text","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif; 
-  margin: 0;
-  padding: 0;
-  top: 40%;
-  left: 50%;
-  -ms-transform: translate(-50%,-50%);
-  -webkit-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
-  font-size: 5rem;
-}
-
-.subtitle1 {
-  position: absolute;
-  color: white;
-  font-weight: bold;
-  /* Appleと同じフォントの種類を指定 */
-  font-family:"SF Pro Text","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif; 
-  margin: 0;
-  padding: 0;
-  top: 50%;
-  left: 50%;
-  -ms-transform: translate(-50%,-50%);
-  -webkit-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
-  font-size: 3rem;
-}
 
 
-.subtitle2 {
-  position: absolute;
-  font-weight: bold;
-  /* Appleと同じフォントの種類を指定 */
-  font-family:"SF Pro Text","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif; 
-  margin: 0;
-  padding: 0;
-  top: 60%;
-  left: 50%;
-  -ms-transform: translate(-50%,-50%);
-  -webkit-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
-  font-size: 3rem;
-}
 
 .webapp .topimg2 a {
   color: white;
   border-bottom: solid 3px white;
 }
-
-/* 背景全体を暗くする
-   beforeで背景画像前面に要素を用意し
-   rgbaで半透明の黒を重ねる
-*/
-
-/*
-.topimg2::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: block;
-  width: 100%;
-  height: 100vh;
-  background-color: rgba(0,0,0,0.4);
-}
-*/
-
-/* 背景画像をぼかす設定
-  blurでぼかす
-  ぼかす程度はpxで指定
-*/
 
 .topimg2 {
   z-index: 0;
@@ -603,27 +871,6 @@ li {
   right: -5px;
   background: inherit;
   filter: blur(5px);
-}
-
-
-/* flashメッセージの位置設定 */
-
-.alert-success {
-  color: #155724;
-  background-color: #d4edda;
-  border-color: #c3e6cb;
-  margin-top: 134px;
-  margin-bottom: -140px;
-  margin-right: 200px;
-  margin-left: 200px;
-}
-
-.alert-danger {
-  
-  margin-top: 134px;
-  margin-bottom: -140px;
-  margin-right: 200px;
-  margin-left: 200px;
 }
 
 /* toppageの位置設定 */
@@ -645,64 +892,6 @@ li {
   #user-show {
     margin-top: 13rem;
   }
-}
-
-
-@media only screen and (min-width: 0px) {
-  /*　スマホ縦用 */
-  #user-show img {
-    /* 円形にする */
-    border-radius: 50%;
-    width: 160px;
-    height: 160px;
-  }
-}
-
-@media only screen and (min-width: 576px) {
-  /*　スマホ横用 */
-  #user-show img {
-    /* 円形にする */
-    border-radius: 50%;
-    width: 160px;
-    height: 160px;
-    margin-left: -14px;
-  }
-}
-
-@media only screen and (min-width: 992px) {
-  /*　タブレット用 */
-  #user-show img {
-    /* 円形にする */
-    border-radius: 50%;
-    width: 160px;
-    height: 160px;
-    margin-left: 18px;
-  }
-}
-
-@media only screen and (min-width: 1025px) {
-  /* PC用 */
-  #user-show img {
-    /* 円形にする */
-    border-radius: 50%;
-    width: 160px;
-    height: 160px;
-    object-fit: cover;
-  }
-}
-
-/* 各種設定　*/
-
-.black {
-  color: black;
-}
-
-.white {
-  color: white;
-}
-
-.water {
-  background-color: #d9edf7;
 }
 
 /* 文字を太字にする設定 */
@@ -821,57 +1010,8 @@ li {
   width: 100%;
 }
 
-/* ウィンドウの設定 */
 
-@media only screen and (min-width: 0px) {
-  
-  .c-modal_content {
-    background: #fff;
-    left: 50%;
-    position: absolute;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 5px;
-    width: 30%;
-  }
-}
 
-@media only screen and (min-width: 576px) {
-  
-  .c-modal_content {
-    background: #fff;
-    left: 50%;
-    position: absolute;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 5px;
-    width: 30%;
-  }
-}
-
-@media only screen and (min-width: 768px) {
-  .c-modal_content {
-    background: #fff;
-    left: 50%;
-    position: absolute;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 5px; 
-    width: 50%;
-  }
-}
-
-@media only screen and (min-width: 1025px) {
-  .c-modal_content {
-    background: #fff;
-    left: 50%;
-    position: absolute;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 5px;
-    width: 70%;
-  }
-}
 
 .c-modal_content_inner {
   position: relative;
@@ -1031,10 +1171,7 @@ li {
   text-align:center;
 }
 
-.content1 h5 {
-  margin-top: 30px;
-  font-weight: bold;
-}
+
 
 .post1 {
   padding-top: 10px;
@@ -1060,28 +1197,10 @@ li {
 
 
 
-.login {
-  padding-top: 10rem;
-}
 
-.password {
-  margin-top: 3rem;
-}
 
-.passwordcon {
-  margin-top: 3rem;
-}
 
-.signup {
-  margin-top: 3rem;
-  border-radius: 50px;
 
-}
-
-.login-button {
-  margin-top: 3rem;
-  border-radius: 50px;
-}
 
 .username {
   font-weight: bold;
@@ -1289,40 +1408,6 @@ li {
 /*　User一覧の設定 */
 
 @media only screen and (min-width: 0px) {
-  .user-profile{
-    width: 300px;
-    padding:2em;
-    background:#fff;
-    border:#ddd 5px solid;
-    border-radius:10px;
-    margin-top: 30px;
-  }
-}
-
-@media only screen and (min-width: 568px) {
-  .user-profile{
-    width: 230px;
-    padding:2em;
-    background:#fff;
-    border:#ddd 5px solid;
-    border-radius:10px;
-    margin-top: 20px;
-  }
-}
-
-@media only screen and (min-width: 992px) {
-  
-  .user-profile{
-    width: 300px;
-    padding:2em;
-    background:#fff;
-    border:#ddd 5px solid;
-    border-radius:10px;
-    margin-top: 30px;
-  }
-}
-
-@media only screen and (min-width: 0px) {
   
   .user-profile span{
     display:inline-block;
@@ -1366,12 +1451,7 @@ li {
   }
 }
 
-.user-profile img{
-  width:100%;
-  height:auto;
-  border-radius:30px 0;
-  margin-left: 20px;
-}
+
 
 .user-profile h1{
   margin: 10px 0;
@@ -1458,61 +1538,6 @@ li {
   }
 }
 
-@media only screen and (min-width: 0px) {
-  /*　スマホ縦用 */
-  .form-control{
-    font-size: 21px;
-  }
-}
-
-@media only screen and (min-width: 576px) {
-  /*　スマホ横用 */
-  .form-control{
-    font-size: 20px;
-  }
-}
-
-@media only screen and (min-width: 768px) {
-  /*　タブレット用 */
-  .form-control{
-    font-size: 3rem;
-  }
-}
-
-@media only screen and (min-width: 1025px) {
-  /* PC用 */
-  .form-control{
-    font-size: 20px;
-  }
-}
-
-@media only screen and (min-width: 0px) {
-  /*　スマホ縦用 */
-  .post p {
-    font-size: 30px;
-  }
-}
-
-@media only screen and (min-width: 576px) {
-  /*　スマホ横用 */
-  .post p {
-    font-size: 30px;
-  }
-}
-
-@media only screen and (min-width: 768px) {
-  /*　タブレット用 */
-  .post p {
-    font-size: 30px;
-  }
-}
-
-@media only screen and (min-width: 1025px) {
-  /* PC用 */
-  .post  p {
-    font-size: 28px;
-  }
-}
 
 @media only screen and (min-width: 0px) {
   /*　スマホ縦用 */

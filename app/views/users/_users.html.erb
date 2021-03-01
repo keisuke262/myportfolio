@@ -5,13 +5,13 @@
     <div class="container" id="user-show">
         <div class="row">
             <% users.each do |user| %>
-                <div class="col-4 col-sm-5 offset-sm-1 col-xl-4 offset-xl-0">
+                <div class="col-5 offset-1 col-xl-4 offset-xl-0">
                     <div>
                         <div class="user-profile">
                             <% if user.image? %>
-                                <%= image_tag user.image.url %>
+                                <%= image_tag user.image.url, alt: 'profile画像' %>
                             <% else %>
-                                <%= image_tag "/assets/default.png" %>
+                                <%= image_tag "/assets/logo3.png", alt: 'profile画像' %>
                             <% end %>
                             <span class="like-button"><%= render 'relationships/follow_button', user: user %></span>
                             <h1><%= user.name %></h1>
@@ -27,97 +27,3 @@
         <%= paginate users %>
     </div>
 <% end %>
-
-
-
-# Ruby CircleCI 2.0 configuration file
-#
-# Check https://circleci.com/docs/2.0/language-ruby/ for more details
-#
-version: 2.1
-orbs:
-  ruby: circleci/ruby@0.1.2 
-
-jobs:
-  build:
-    docker:
-      - image: circleci/ruby:2.5.3-stretch-node
-    executor: ruby/default
-    steps:
-      - checkout
-      - run:
-          name: Which bundler?
-          command: bundle -v
-      - ruby/bundle-install
-
-  rubocop:
-    docker:
-      - image: circleci/ruby:2.5.3-node-browsers-legacy
-        environment:
-          RAILS_ENV: test
-          POSTGRES_HOST: 127.0.0.1
-      - image: circleci/postgres:9.4
-        environment:
-          POSTGRES_USER: postgres
-          POSTGRES_DB: app_test
-    working_directory: ~/repo
-    steps:
-      - checkout
-      - restore_cache:
-          keys:
-            - v1-dependencies-{{ checksum "Gemfile.lock" }}
-            # fallback to using the latest cache if no exact match is found
-            - v1-dependencies-
-      - run: bundle install --jobs=4 --retry=3 --path vendor/bundle
-      - run: yarn install
-      - save_cache:
-          paths:
-            - ./vendor/bundle
-          key: v1-dependencies-{{ checksum "Gemfile.lock" }}
-      # Rubocop
-      - run:
-          name: Rubocop
-          command: bundle exec rubocop
-
-  rspec:
-    docker:
-      - image: circleci/ruby:2.6.0-node-browsers-legacy
-        environment:
-          RAILS_ENV: test
-          POSTGRES_HOST: 127.0.0.1
-      - image: circleci/postgres:9.4
-        environment:
-          POSTGRES_USER: postgres
-          POSTGRES_DB: app_test
-    working_directory: ~/repo
-    steps:
-      - checkout
-      - restore_cache:
-          keys:
-            - v1-dependencies-{{ checksum "Gemfile.lock" }}
-            # fallback to using the latest cache if no exact match is found
-            - v1-dependencies-
-      - run: bundle install --jobs=4 --retry=3 --path vendor/bundle
-      - run: yarn install
-      - save_cache:
-          paths:
-            - ./vendor/bundle
-          key: v1-dependencies-{{ checksum "Gemfile.lock" }}
-      - run: bundle exec rake db:create
-      - run: bundle exec rake db:schema:load
-      # Rspec
-      - run:
-          name: Rspec
-          command: bundle exec rspec
-
-workflows:
-  version: 2
-  rubocop_rspec:
-    jobs:
-      - rubocop
-      - rspec:
-          requires:
-            - rubocop
-
-
-

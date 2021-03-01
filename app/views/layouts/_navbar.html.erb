@@ -1,0 +1,22 @@
+<header class="mb-4" id="header_bar">
+    <!-- 576px以上の画面幅(sm)のとき、メニューを表示する（それ未満なら折りたたむ）指定を追加 -->
+    <nav class="navbar navbar-expand-sm navbar-light" style="background-color: #7acbe1;">
+        <%= link_to 'SPEnglish', toppage_path, class: 'navbar-brand' %>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+            <span class="navbar-toggler-icon">
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+                <li class="nav-item"><%= link_to 'Users', users_path, class: 'nav-link' %></li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown"><%= current_user.name %></a>
+                    <ul class="dropdown-menu dropdown-menu-right">  
+                        <li class="dropdown-item"><%= link_to 'Profile', user_path(current_user) %></li>
+                        <li class="dropdown-divider"></li>
+                        <li class="dropdown-item"><%= link_to 'Log out', logout_path, method: :delete, data: { confirm: "Are you sure you want to log out of NED?" } %></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>

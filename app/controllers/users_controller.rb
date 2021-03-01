@@ -2,6 +2,9 @@
 
 
 class UsersController < ApplicationController
+
+  
+
   before_action :require_user_logged_in, only:[:index, :show, :edit, :followings, :followers]
   before_action :require_user_logged_in, only:[:index, :show, :edit, :favoritemicroposts]
 
@@ -31,7 +34,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params1)
 
     if @user.save
-      flash[:success] = 'Welcome to FSP !'
+      flash[:success] = 'Welcome to SPEnglish !'
       redirect_to login_path
     else
       flash.now[:danger] = 'Failed'

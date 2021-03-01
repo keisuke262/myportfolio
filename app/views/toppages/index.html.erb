@@ -4,7 +4,7 @@
       <div class="col-lg-3">
         <div class="content1">
           <!-- modal open -->
-          <h5 class="text-center post">Share your original phrase</h5>
+          <h5 class="text-center post">Share Phrases</h5>
           <p class="text-center post"><a class="js-modal-open" href="" data-target="modal01">Post</a></p>
         </div>
         <!-- modal -->
@@ -12,7 +12,7 @@
           <div class="c-modal_bg js-modal-close"></div>
           <div class="c-modal_content _lg">
             <div class="c-modal_content_inner text-center post">
-              <p>Share your original phrase</p>
+              <p>Share your favorite phrase</p>
               <%= form_with(model: @post, local: true) do |f| %>
                 <div class="form-group">
                   <%= f.text_area :content, class: 'form-control', rows: 5 %>
