@@ -3,8 +3,6 @@
 
 class UsersController < ApplicationController
 
-  
-
   before_action :require_user_logged_in, only:[:index, :show, :edit, :followings, :followers]
   before_action :require_user_logged_in, only:[:index, :show, :edit, :favoritemicroposts]
 

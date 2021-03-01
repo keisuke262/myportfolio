@@ -124,7 +124,7 @@ img {
   top: 0%;
   width: 100%;
   z-index: 100;
-  padding: 1rem;
+  /* padding: 1rem; */
  }
 
 /* Home */
@@ -649,9 +649,46 @@ h5 {
     margin-left: 30px;
   }
 
+  .content {
+
+    width: 100%;
+    padding: 15px 30px;
+    background-color: #FFF;
+    box-sizing: border-box;
+    overflow: hidden;
+    border-radius: 22px;
+    margin-top: 50px;
+    margin-left: 43px;
+  }
+
+  .content1 {
+
+    width: 100%;
+    padding: 15px 30px;
+    background-color: #FFF;
+    box-sizing: border-box;
+    overflow: hidden;
+    border-radius: 22px;
+    margin: 5rem 0 0px 43px;
+  }
+
+  .content2 {
+
+    width: 100%;
+    padding: 15px 30px;
+    background-color: #FFF;
+    box-sizing: border-box;
+    overflow: hidden;
+    border-radius: 22px;
+    margin-top: 50px;
+    margin-left: 43px;
+  }
+
 }
 
 /* mobile版ここまで */
+
+/* mobile-min版 */
 
 @media (max-width: 400px) {
   .home-content p {
@@ -659,6 +696,18 @@ h5 {
     margin: 83px 0 42px;
   }
 }
+
+/* mobile-mini版ここまで */
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1025,23 +1074,6 @@ li {
   right: 10px;
 }
 
-/* profileの部分 */
-
-@media only screen and (min-width: 0px) {
-  
-  .content {
-
-    width: 100%;
-    padding: 15px 30px;
-    background-color: #FFF;
-    box-sizing: border-box;
-    overflow: hidden;
-    border-radius: 22px;
-    margin-top: 50px;
-  }
-}
-
-
 @media only screen and (min-width: 576px) {
   
   .content {
@@ -1085,21 +1117,9 @@ li {
 
 
 
-/* content1(投稿場所)の設定 */
-
-@media only screen and (min-width: 0px) {
   
-  .content1 {
+  
 
-    width: 100%;
-    padding: 15px 30px;
-    background-color: #FFF;
-    box-sizing: border-box;
-    overflow: hidden;
-    border-radius: 22px;
-    margin: 5rem auto 0;
-  }
-}
 
 @media only screen and (min-width: 576px) {
   .content1 {
@@ -1114,21 +1134,6 @@ li {
 
   }
 }
-
-@media only screen and (min-width: 0px) {
-  
-  .content2 {
-
-    width: 100%;
-    padding: 15px 30px;
-    background-color: #FFF;
-    box-sizing: border-box;
-    overflow: hidden;
-    border-radius: 22px;
-    margin-top: 50px;
-  }
-}
-
 
 @media only screen and (min-width: 576px) {
   .content2 {
