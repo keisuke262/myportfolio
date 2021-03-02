@@ -210,7 +210,7 @@ h1 {
 }
 
 .btn {
-  font-size: 23px;
+  font-size: 20px;
 }
 
 .signup {
@@ -316,6 +316,104 @@ h5 {
   margin-left: 30px;
 }
 
+/* user-detail */
+
+.user-img-edit {
+  margin-top: 130px;
+}
+
+.user-img-edit img {
+  margin: 0;
+}
+
+.user-pro-img {
+  width: 200px;
+  /* 画像を円形にする設定 */
+  border-radius: 50%;
+}
+
+/* post */
+
+.post-modal a {
+  display:block;
+  height:50px;
+  margin-top: 70px;
+  line-height:50px;
+  background:tomato;
+  color:#fff;
+  border-radius:25px;
+  text-decoration:none;
+  text-align:center;
+}
+
+.post-modal-toppage {
+  width: 100%;
+  padding: 15px 30px;
+  background-color: #FFF;
+  box-sizing: border-box;
+  overflow: hidden;
+  border-radius: 22px;
+  margin-right: 43px; 
+}
+
+.post-modal-toppage a {
+  display:block;
+  height:50px;
+  margin-top: 30px;
+  line-height:50px;
+  background:tomato;
+  color:#fff;
+  border-radius:25px;
+  text-decoration:none;
+  text-align:center;
+}
+
+/* profile欄 */
+
+.profile-intro {
+  margin-top: 20px;
+}
+
+.user-name {
+  margin-top: 15px;
+  margin-left: 15px;
+}
+
+
+
+/* user-toppage */
+
+.user-toppage p {
+  margin-bottom: 25px;
+} 
+
+/* profileの投稿数の位置設定 */
+
+.posts-ml {
+  margin-left: 15px;
+} 
+
+/* profileのsubscriptionなどの記入欄 */
+
+.profile-intro p {
+  margin-left: -27px;
+}
+
+/* View-profile */
+
+.user-profile a{
+  display:block;
+  height:50px;
+  margin:1em 0;
+  line-height:50px;
+  background:tomato;
+  color:#fff;
+  border-radius:25px;
+  box-shadow:0 5px 0 gold;
+  text-decoration:none;
+  text-align:center;
+}
+
 /* Desktop版ここまで */
 
 
@@ -324,7 +422,7 @@ h5 {
 @media (max-width: 1025px) {
 
   /* Header */
-  .main-nav {
+  .main-nav { 
     /* <li>タグを横並びにする */
     display: flex; 
     font-size: 1.25rem;
@@ -571,7 +669,7 @@ h5 {
   }
 
   .btn {
-    font-size: 20px;
+    font-size: 15px;
   }
 
   .name {
@@ -661,8 +759,27 @@ h5 {
     margin-left: 43px;
   }
 
-  .content1 {
+  .post-modal {
+    width: 100%;
+    padding: 15px 30px;
+    box-sizing: border-box;
+    overflow: hidden;
+    border-radius: 22px;
+  }
 
+  .post-modal a {
+    display:block;
+    height:50px;
+    margin-top: 30px;
+    line-height:50px;
+    background:tomato;
+    color:#fff;
+    border-radius:25px;
+    text-decoration:none;
+    text-align:center;
+  }
+
+  .post-modal-toppage {
     width: 100%;
     padding: 15px 30px;
     background-color: #FFF;
@@ -684,8 +801,68 @@ h5 {
     margin-left: 43px;
   }
 
-}
+  /* profileの投稿数の位置設定 */
 
+  .posts-ml {
+    margin-left: 15px;
+  } 
+
+  /* profileのsubscriptionなどの記入欄 */
+
+  .profile-intro p {
+    margin-left: -5px;
+  }
+
+  /* like unlike button */
+  .like-unlike-button .btn {
+   font-size: 15px;
+   border-radius: .2rem;  
+   margin-left: -14px;
+  }
+
+  /* edit-profile button */
+
+  .edit-profile-btn {
+    margin-top: 45px;
+  }
+
+  
+  /* varius-button */
+
+  .varius-btn {
+    margin-top: 25px;
+  }
+
+  /* nameの上の余白 */
+
+  .margin-post {
+    margin-top: 25px;
+  }
+
+  /* text-mutedのfont-size */
+
+  .text-muted {
+    font-size: 11px;
+  }
+
+  /* View-profile */
+
+  .user-profile a{
+    display:block;
+    height:50px;
+    margin:1em 0;
+    line-height:50px;
+    background:tomato;
+    color:#fff;
+    border-radius:25px;
+    box-shadow:0 5px 0 gold;
+    text-decoration:none;
+    text-align:center;
+  }
+
+
+
+  
 /* mobile版ここまで */
 
 /* mobile-min版 */
@@ -695,7 +872,22 @@ h5 {
     font-size: 1.125rem;
     margin: 83px 0 42px;
   }
+
+  /* edit-btn */
+
+  .edit-btn {
+    margin-left: 9px;
+  }
+
+  /* like unlike button */
+  .like-unlike-button .btn {
+    font-size: 15px;
+    border-radius: .2rem;  
+    margin-left: 0px;
+   }
 }
+
+
 
 /* mobile-mini版ここまで */
 
@@ -749,112 +941,14 @@ h5 {
 
 
 
-.col-sm-8 {
-  width: 66.66667%;
-}
-
-.col-sm-4 {
-  width: 33.33333%;
-}
-
-.pt-6 {
-  padding-top: 50px;
-}
-
-.pb-6 {
-  padding-bottom: 50px;
-}
-
 /* liのhober時にマウスポインタ―を付ける */
 li {
   cursor: pointer;
   color: #00BFFF;
 }
 
-.active .side-letter {
-  font-weight: 700;
-  color: #0066FF;
-}
-
-.mt-4{
-  margin-top: 3rem!important;
-}
-
-@media only screen and (max-width: 576px) {
-  .mt-5 {
-  margin-top: -1rem!important;
-  }
-}
 
 
-@media only screen and (min-width: 576px) {
-  .mt-5 {
-    margin-top: 1rem!important;
-  }
-}
-
-.side-letter {
-  color: #00BFFF;
-  cursor: pointer;
-}
-
- @media only screen and (min-width: 0px) {
- .mb-5 {
-   margin-bottom: 8rem!important;
- }
-}
-
-@media only screen and (min-width: 576px) {
- .mb-5 {
-  margin-bottom: 4rem!important;
- }
-}
-
-
-/* cardに関する設定 */
-.card {
-  border: 0;
-}
-
-@media only screen and (min-width: 0px) {
- .card  {
-   margin-top: 50px;
- }
-}
-
-@media only screen and (min-width: 576px) {
- .card {
-   margin-top: 25px;
- }
-}
-
-@media only screen and (min-width: 0px) {
- .like-button .btn  {
-   font-size: 20px;
-   border-radius: 25px;
- }
-}
-
-@media only screen and (min-width: 576px) {
- .like-button .btn {
-   font-size: 20px;
-   border-radius: 25px;
- }
-}
-
-@media only screen and (min-width: 0px) {
- .user-top .btn  {
-   font-size: 23px;
-   border-radius: 25px;
- }
-}
-
-@media only screen and (min-width: 576px) {
- .user-top .btn {
-   font-size: 20px;
-   border-radius: 25px;
- }
-}
 
 @media only screen and (min-width: 0px) {
  .post-content {
@@ -867,38 +961,6 @@ li {
    font-size: 23px;
  }
 }
-
-
-
-@media only screen and (min-width: 0px) {
- .card-text {
-   font-size: 3rem;
-
- }
-}
-
-@media only screen and (min-width: 576px) {
- .card-text {
-   font-size: 2rem;
- }
-}
-
-@media only screen and (min-width: 0px) {
- .card-text:last-child  {
-   margin-bottom: 24px;
- }
-}
-
-@media only screen and (min-width: 576px) {
-  .card-text:last-child  {
-    margin-bottom: 8px;
- }
-}
-
-
-
-
-
 
 .webapp .topimg2 a {
   color: white;
@@ -1164,17 +1226,7 @@ li {
   }
 }
 
-.content1 a {
-  display:block;
-  height:50px;
-  margin-top: 30px;
-  line-height:50px;
-  background:tomato;
-  color:#fff;
-  border-radius:25px;
-  text-decoration:none;
-  text-align:center;
-}
+
 
 
 
@@ -1345,7 +1397,7 @@ li {
 
 .change-pro {
   margin-left: -22px; 
-}
+} 
 
 
 @media only screen and (min-width: 0px) {
@@ -1462,21 +1514,6 @@ li {
   margin: 10px 0;
   font-size:20px;
   font-weight:bold;
-}
-.user-profile p{
-  line-height:1.6;
-}
-.user-profile a{
-  display:block;
-  height:50px;
-  margin:1em 0;
-  line-height:50px;
-  background:tomato;
-  color:#fff;
-  border-radius:25px;
-  box-shadow:0 5px 0 gold;
-  text-decoration:none;
-  text-align:center;
 }
 
 @media only screen and (min-width: 0px) {
