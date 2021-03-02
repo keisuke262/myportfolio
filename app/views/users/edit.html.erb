@@ -1,58 +1,63 @@
 <%= render 'layouts/navbar' %>
-<div class="container" id="user-show">
-<div class="row">
-    <div class="col-10 offset-1">
-        <h1 class="text-center">Edit Profile</h1>
-        <%= form_with(model: @user, local: true) do |f| %>
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h1 class="text-center edit-profile">Edit Profile</h1>
+        </div>
+    </div>
+    <%= form_with(model: @user, local: true) do |f| %>
         <%= render 'layouts/error_messages', model: f.object %>
-            <div class="row">
-                <div class="col-3 offset-1">
-                    <% if @user.image? %>
-                        <%= image_tag @user.image.url %>
-                    <% else %>
-                        <%= image_tag "/assets/default.png", :size => '100×100' %>
-                    <% end %>
-                </div>
-                <div class="col-7">
-                    <%= @user.name%>
-                    <p class="change-pro">Change Profile Photo</p>
-                    <button type="button" class="btn btn-outline-secondary rounded-pill image-edit">
+        <div class="row">
+            <div class="col-12 text-center">            
+                <% if @user.image? %>
+                    <%= image_tag @user.image.url, class: 'user-pro-img', alt: 'profile画像' %>
+                <% else %>
+                    <%= image_tag "/assets/default.png", class: 'user-pro-img', alt: 'profile画像' %>
+                <% end %>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="text-center">Change Profile Photo</div><br>
+                    <button type="button" class="btn btn-outline-secondary btn-sm brounded-pill change-photo">
                         <%= f.file_field :image, accept: 'image/jpeg, image/gif, image/png' %>
                     </button>
                 </div>
             </div>
-            <div class="name-edit row">
-                    <div class="col-3 offset-1">
-                        <%= f.label :name, 'Name' %>
-                    </div>
-                    <div class="col-7">
-                        <%= f.text_field :name, class: 'form-control' %>
-                    </div>
-            </div>
-            <div class="goal-edit row">
-                <div class="col-3 offset-1">
-                    <%= f.label :goal, 'Goal' %>
+            <div class="row change-pro">
+                <div class="col-2 offset-1">
+                    <%= f.label :name, 'Name' %>
                 </div>
-                <div class="col-7">
+                <div class="col-8 offset-1">
+                    <%= f.text_field :name, class: 'form-control' %>
+                </div>
+            </div>
+            <div class="row change-pro">
+                <div class="col-2 offset-1">
+                    <%= f.label :goal, 'Subscription' %>
+                </div>
+                <div class="col-8 offset-1">
                     <%= f.text_field :goal, class: 'form-control' %>
                 </div>
             </div>
-            <div class="achieve-edit row">
-                <div class="col-3 offset-1">
-                    <%= f.label :achieve, 'To achieve goal' %>
+            <div class="row change-pro">
+                <div class="col-2 offset-1">
+                    <%= f.label :achieve, 'Movie' %>
                 </div>
-                <div class="col-7">
+                <div class="col-8 offset-1">
                     <%= f.text_field :achieve, class: 'form-control' %>
                 </div>
             </div>
-            <div class="done-edit row">
-                <div class="col-7 offset-4">
-                    <%= f.submit 'Done', class: 'btn btn-primary' %>
-                    <%= link_to 'Cancel', toppage_path, class: 'btn btn-primary' %>
+            <div class="row change-pro"> 
+                <div class="col-2 offset-1 col-sm-2 offset-sm-4">
+                    <%= link_to 'Cancel', toppage_path, class: 'btn btn-primary btn-sm' %>
+                </div>
+                <div class="col-2 offset-6 col-sm-2 offset-sm-4">
+                    <%= f.submit 'Done', class: 'btn btn-primary btn-sm' %>
                 </div>
             </div>
-        <% end %>
+         <% end %>
+        </div>
     </div>
-</div>
 </div>
 

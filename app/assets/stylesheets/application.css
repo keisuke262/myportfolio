@@ -115,6 +115,8 @@ img {
   font-size: 25px;
   padding-left: 30px;
   padding-right: 28px;
+  color: black;
+  font-family: 'Philosopher', selif;
 }
 
 /* navの設定=固定 */
@@ -244,16 +246,16 @@ h1 {
   color: #155724;
   background-color: #d4edda;
   border-color: #c3e6cb;
-  margin-top: 145px;
-  margin-bottom: -180px;
+  margin-top: 100px;
+  margin-bottom: -60px;
   margin-right: 200px;
   margin-left: 200px;
 }
 
 .alert-danger {
   
-  margin-top: 60px;
-  margin-bottom: -45px;
+  margin-top: 100px;
+  margin-bottom: -80px;
   margin-right: 200px;
   margin-left: 200px;
 }
@@ -327,7 +329,8 @@ h5 {
 }
 
 .user-pro-img {
-  width: 200px;
+  width: 145px;
+  height: 145px;
   /* 画像を円形にする設定 */
   border-radius: 50%;
 }
@@ -348,12 +351,12 @@ h5 {
 
 .post-modal-toppage {
   width: 100%;
-  padding: 15px 30px;
+  padding: 10px 5px 5px 10px;
   background-color: #FFF;
   box-sizing: border-box;
   overflow: hidden;
-  border-radius: 22px;
-  margin-right: 43px; 
+  border-radius: 60px;
+  margin: 100px auto 40px;
 }
 
 .post-modal-toppage a {
@@ -414,6 +417,197 @@ h5 {
   text-align:center;
 }
 
+#user-show img {
+  /* 円形にする */
+  border-radius: 50%;
+  width: 160px;
+  height: 160px;
+  margin-left: 0px;
+}
+
+.user-profile{
+  width: 210px;
+  padding: 20px;
+  background:#fff;
+  border:#ddd 5px solid;
+  border-radius: 50px;
+  margin-top: 30px;
+}
+
+.user-profile img{
+  width:100%;
+  height:auto;
+  border-radius:30px 0;
+  margin-left: 30px;
+}
+
+.content {
+
+  width: 100%;
+  padding: 15px 30px;
+  background-color: #FFF;
+  box-sizing: border-box;
+  overflow: hidden;
+  border-radius: 22px;
+  margin-top: 50px;
+  margin-left: 43px;
+}
+
+.post-modal {
+  width: 100%;
+  padding: 15px 30px;
+  box-sizing: border-box;
+  overflow: hidden;
+  border-radius: 22px;
+}
+
+.post-modal a {
+  display:block;
+  height:50px;
+  margin-top: 30px;
+  line-height:50px;
+  background:tomato;
+  color:#fff;
+  border-radius:25px;
+  text-decoration:none;
+  text-align:center;
+}
+
+.post-modal-toppage {
+  width: 100%;
+  padding: 10px 5px 5px 10px;
+  background-color: #FFF;
+  box-sizing: border-box;
+  overflow: hidden;
+  border-radius: 60px;
+  margin: 100px auto 40px;
+}
+
+.content2 {
+
+  width: 100%;
+  padding: 15px 30px;
+  background-color: #FFF;
+  box-sizing: border-box;
+  overflow: hidden;
+  border-radius: 22px;
+  margin-top: 50px;
+  margin-left: 43px;
+}
+
+/* profileの投稿数の位置設定 */
+
+.posts-ml {
+  margin-left: 15px;
+} 
+
+/* profileのsubscriptionなどの記入欄 */
+
+.profile-intro p {
+  margin-left: -27px;
+}
+
+/* like unlike button */
+.like-unlike-button .btn {
+ font-size: 15px;
+ border-radius: .2rem;  
+ margin-left: -14px;
+}
+
+/* edit-profile button */
+
+.edit-profile-btn {
+  margin-top: 45px;
+}
+
+
+/* varius-button */
+
+.varius-btn {
+  margin-top: 25px;
+}
+
+/* nameの上の余白 */
+
+.margin-post {
+  margin-top: 25px;
+}
+
+/* text-mutedのfont-size */
+
+.text-muted {
+  font-size: 11px;
+}
+
+/* View-profile */
+
+.edit-profile {
+  margin-top: 83px
+}
+
+.change-pro {
+  margin-top: 20px;
+}
+
+.change-photo {
+  margin-left: 50px;
+}
+
+.all-user {
+  margin-top: 110px;
+}
+
+.border-bottm {
+  border-bottom: solid 1px;
+}
+
+.change-photo {
+  margin-left: 377px;
+}
+
+/* like unlike button */
+.like-unlike-button .btn {
+  font-size: 20px;
+  border-radius: .2rem;  
+  margin-left: 0px;
+ }
+
+ /* Follow Follower一覧 */
+
+ .followings .nav-tabs {
+   margin-top: 100px;
+ }
+
+ .followers .nav-tabs {
+   margin-top: 100px;
+ }
+
+.follower {
+  margin-left: 550px;
+  margin-top: 40px;
+}
+
+.followed {
+  margin-left: 550px;
+  margin-top: 40px;
+ }
+
+.cancel {
+  margin-left: 81px;
+}
+
+.done {
+  margin-left: 5px;
+}
+
+.edit-posts {
+  margin-top: 100px;
+}
+
+.user-img-edit .follow-unfollow-btn {
+  margin-top: 32px;
+}
+ 
 /* Desktop版ここまで */
 
 
@@ -457,16 +651,16 @@ h5 {
     color: #155724;
     background-color: #d4edda;
     border-color: #c3e6cb;
-    margin-top: 110px;
-    margin-bottom: -270px;
+    margin-top: 95px;
+    margin-bottom: -80px;
     margin-right: 200px;
     margin-left: 200px;
   } 
   
   .alert-danger {
     
-    margin-top: 60px;
-    margin-bottom: -45px;
+    margin-top: 100px;
+    margin-bottom: -80px;
     margin-right: 200px;
     margin-left: 200px;
   }
@@ -492,6 +686,39 @@ h5 {
     border:#ddd 5px solid;
     border-radius:10px;
     margin-top: 30px;
+  }
+
+  .change-photo {
+    margin-left: 270px;
+  }
+
+  .profile-intro p {
+    margin-left: -27px;
+  }
+
+  /* like unlike button */
+  .like-unlike-button .btn {
+    font-size: 20px;
+    border-radius: .2rem;  
+    margin-left: 0px;
+  }
+
+  .follower {
+    margin-left: 125px;
+    margin-top: 35px;
+  }
+  
+  .followed {
+    margin-left: 125px;
+    margin-top: 35px;
+   }
+
+   .cancel {
+    margin-left: 36px;
+  }
+
+  .done {
+    margin-left: 5px;
   }
 }
  
@@ -529,16 +756,16 @@ h5 {
     color: #155724;
     background-color: #d4edda;
     border-color: #c3e6cb;
-    margin-top: 110px;
-    margin-bottom: -270px;
+    margin-top: 90px;
+    margin-bottom: -80px;
     margin-right: 200px;
     margin-left: 200px;
   }
   
   .alert-danger {
     
-    margin-top: 60px;
-    margin-bottom: -45px;
+    margin-top: 100px;
+    margin-bottom: -80px;
     margin-right: 200px;
     margin-left: 200px;
   }
@@ -560,6 +787,39 @@ h5 {
     border:#ddd 5px solid;
     border-radius:10px;
     margin-top: 20px;
+  }
+
+  .change-photo {
+    margin-left: 170px;
+  } 
+  
+  .profile-intro p {
+    margin-left: -27px;
+  }
+
+  /* like unlike button */
+  .like-unlike-button .btn {
+    font-size: 20px;
+    border-radius: .2rem;  
+    margin-left: 0px;
+  }
+
+  .follower {
+    margin-left: 100px;
+    margin-top: 35px;
+  }
+  
+  .followed {
+    margin-left: 100px;
+    margin-top: 35px;
+   }
+
+   .cancel {
+    margin-left: -24px; 
+  }
+
+  .done {
+    margin-left: 5px;
   }
 
 }
@@ -656,7 +916,7 @@ h5 {
 
   /* Signup */
   h1 {
-    font-size: 25px;
+    font-size: 22px;
   }
   
   .account {
@@ -682,15 +942,15 @@ h5 {
     color: #155724;
     background-color: #d4edda;
     border-color: #c3e6cb;
-    margin-top: 95px;
-    margin-bottom: -305px;
+    margin-top: 80px;
+    margin-bottom: -80px;
     margin-right: 10px;
     margin-left: 10px;
   }
 
   .alert-danger {
-    margin-top: 25px;
-    margin-bottom: -23px;
+    margin-top: 80px;
+    margin-bottom: -80px;
     margin-right: 70px;
     margin-left: 80px; 
   }
@@ -780,13 +1040,30 @@ h5 {
   }
 
   .post-modal-toppage {
-    width: 100%;
-    padding: 15px 30px;
+    width: 93%;
+    padding: 10px 5px 5px 10px;
     background-color: #FFF;
     box-sizing: border-box;
     overflow: hidden;
-    border-radius: 22px;
-    margin: 5rem 0 0px 43px;
+    border-radius: 60px;
+    margin: 100px auto 40px;
+  }
+
+  .post-modal-toppage p {
+    margin-bottom: 10px;
+  }
+
+  .post-modal-toppage a {
+    display:block;
+    width: 100px;
+    height:40px;
+    margin: 10px auto 0;
+    line-height:38px;
+    background:tomato;
+    color:#fff;
+    border-radius:25px;
+    text-decoration:none;
+    text-align:center;
   }
 
   .content2 {
@@ -823,7 +1100,7 @@ h5 {
   /* edit-profile button */
 
   .edit-profile-btn {
-    margin-top: 45px;
+    margin-top: 32px;
   }
 
   
@@ -831,6 +1108,7 @@ h5 {
 
   .varius-btn {
     margin-top: 25px;
+    margin-bottom: 20px
   }
 
   /* nameの上の余白 */
@@ -860,8 +1138,60 @@ h5 {
     text-align:center;
   }
 
+  .edit-profile {
+    margin-top: 83px
+  }
+ 
+  .change-pro {
+    margin-top: 20px;
+  }
 
+  .change-photo {
+    margin-left: 50px;
+  }
 
+ 
+  .follower {
+    margin-left: 55px;
+    margin-top: 25px;
+  }
+  
+  .followed {
+    margin-left: 55px;
+    margin-top: 25px;
+   }
+
+   h5 { 
+    font-size: 18px;
+  }
+
+  .toppage {
+    margin-top: 1px;
+  }
+ 
+  .cancel {
+    margin-left: -72px;
+  }
+  
+  .done {
+    margin-left: 5px;
+  }
+
+  .user-pro-img {
+    width: 100px;
+    height: 100px; 
+    /* 画像を円形にする設定 */
+    border-radius: 50%;
+  }
+
+  .border-bottom .user-pro-img {
+    width: 75px;
+    height: 75px;
+    /* 画像を円形にする設定 */
+    border-radius: 50%;
+  }
+
+} 
   
 /* mobile版ここまで */
 
@@ -885,6 +1215,16 @@ h5 {
     border-radius: .2rem;  
     margin-left: 0px;
    }
+
+   .btn {
+     font-size: 13px;
+   }
+
+   .border-bottom .btn {
+     margin-left: 18px;
+   }
+
+   
 }
 
 
@@ -1416,49 +1756,6 @@ li {
     padding: 60px 10px;
     margin-bottom: 20px;
     font-size: 22px;
-  }
-}
-
-@media only screen and (min-width: 0px) {
-  
-  .cancel {
-    margin-left : 10px;
-  }
-}
-
-
-@media only screen and (min-width: 576px) {
-  
-  .cancel {
-    margin-left : 0px;
-  }
-}
-
-
-@media only screen and (min-width: 0px) {
-  
-  .done {
-    margin-left : 198px;
-  }
-}
-
-@media only screen and (min-width: 568px) {
-  
-  .done {
-    margin-left : -28px;
-  }
-}
-
-@media only screen and (min-width: 769px) {
-  
-  .done {
-    margin-left : -28px;
-  }
-}
-
-@media only screen and (min-width: 1025px) {
-  .done {
-    margin-left : 30px;
   }
 }
 

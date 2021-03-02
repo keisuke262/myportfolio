@@ -2,7 +2,7 @@
   <ul>
   <% if posts.present? %>
     <% posts.each do |post| %>
-      <li class="row">
+      <li class="row border-bottom">
         <div class="col-3">
           <% if post.user.image? %>
             <%= image_tag post.user.image.url, class: 'user-pro-img', alt: 'profile画像' %>

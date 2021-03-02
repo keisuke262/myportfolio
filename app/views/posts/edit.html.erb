@@ -1,4 +1,5 @@
-<div class="container" id="user-show">
+<%= render 'layouts/navbar' %>
+<div class="container edit-posts">
     <div class="row">
         <div class="col-12">
             <h1 class="text-center">Edit Post</h1>
@@ -6,9 +7,9 @@
                 <%= render 'layouts/error_messages', model: f.object %>
                 <%= f.text_field :content, class: 'form-control edit-content' %>
                 <div class="row">
-                    <div class="col-6 offset-6 col-sm-3 offset-sm-9">
-                        <%= f.submit 'Done' , class: 'btn btn-primary done'%>
+                    <div class="col-3 offset-9">
                         <%= link_to 'Cancel', toppage_path, class: 'btn btn-primary cancel' %>
+                        <%= f.submit 'Done' , class: 'btn btn-primary done'%>
                     </div>
                 </div>
             <% end %>

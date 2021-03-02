@@ -1,28 +1,33 @@
-<!--ユーザ一覧はユーザ一覧ページ・followページ・followerページで必要なのでパーシャル化しておく-->
-<h1 class="text-center alluser">ALL USERS</h1>
 <% if users.any? %>
-    <div class="container" id="user-show">
+    <div class="container">
         <div class="row"> 
             <% users.each do |user| %>
-                <div class="col-5 offset-1 col-xl-4 offset-xl-0">
-                    <div>
-                        <div class="user-profile">
-                            <% if user.image? %>
-                                <%= image_tag user.image.url, alt: 'profile画像' %>
-                            <% else %>
-                                <%= image_tag "/assets/logo3.png", alt: 'profile画像' %>
-                            <% end %>
-                            <span class="like-button"><%= render 'relationships/follow_button', user: user %></span>
-                            <h1><%= user.name %></h1>
-       
-                            <%= link_to 'View profile', user_path(user) %>
+                <div class="col-3 offset-1 border-bottom">
+                    <% if user.image? %>
+                      <%= link_to user_path(user) do %>
+                        <%= image_tag user.image.url, class: 'user-pro-img', alt: 'profile画像' %>
+                      <% end %>
+                    <% else %>
+                      <%= link_to user_path(user) do %>
+                        <%= image_tag "/assets/default.png", class: 'user-pro-img', alt: 'profile画像' %>
+                      <% end %>
+                    <% end %>
+                </div>  
+                <!--- profile画像ここまで -->
+                <div class="col-8 margin-post border-bottom">
+                    <div class="row">
+                        <div class="col-2">
+                            <%= link_to user.name, user_path(user)%>
+                        </div>
+                        <div class="col-5 offset-1">
+                            <%= render 'relationships/follow_button', user: user %>
                         </div>
                     </div>
                 </div>
             <% end %>
         </div>
-    </div>
-    <div class="paginate">
-        <%= paginate users %>
+        <div class="paginate">
+            <%= paginate users %>
+        </div>
     </div>
 <% end %>

@@ -21,8 +21,8 @@
     <!-- rowここまで -->
     <div class="row profile-intro">
         <div class="col-12">
-            <p>Subscription : <%= @user.goal %><br>
-               Favorite movie(drama) : <%= @user.achieve %>
+            <p>Subscription : <%= @user.subscription %><br>
+               Movie : <%= @user.movie %>
             </p>
         </div>
     </div>
@@ -32,11 +32,15 @@
             <%= @count_posts %>Posts 
         </div>
         <div class="col-2">
-            <%= @count_followers %>Followers
-        </div> 
-        <div class="col-2 offset-1">
-            <%= @count_followings %>Following
+            <%= link_to followings_user_path(@user) do %>
+                <%= @count_followings %>Following
+            <% end %>
         </div>
+        <div class="col-2 offset-1">
+            <%= link_to followers_user_path(@user) do %>
+                <%= @count_followers %>Followers
+            <% end %>
+        </div> 
         <div class="col-4">
         </div>
     </div>
