@@ -607,6 +607,10 @@ h5 {
 .user-img-edit .follow-unfollow-btn {
   margin-top: 32px;
 }
+
+.profile-intro p {
+  margin-bottom: 20px;
+}
  
 /* Desktop版ここまで */
 
@@ -1189,7 +1193,7 @@ h5 {
     height: 75px;
     /* 画像を円形にする設定 */
     border-radius: 50%;
-  }
+  } 
 
 } 
   
