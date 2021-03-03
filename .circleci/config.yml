@@ -1,6 +1,6 @@
 version: 2.1
 orbs:
-  heroku: circleci/heroku@0.0.8
+  heroku: circleci/heroku@01.0.0
 
 jobs:
   build:
@@ -64,10 +64,9 @@ jobs:
         destination: test-results 
   deploy:
     executor: heroku/default
-    steps:
+    steps: 
       - checkout
       - heroku/install
       - heroku/deploy-via-git:  
         only-branch: master
-      - heroku run rails db:migrate --app $HEROKU_APP_NAME
   
