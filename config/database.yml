@@ -13,9 +13,9 @@ default: &default
   adapter: mysql2
   encoding: utf8
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  username: root
-  password: password
-  host: db 
+  username: <%= ENV.fetch("MYSQL_USERNAME") %>
+  password: <%= ENV.fetch("MYSQL_PASSWORD") %>
+  host: <%= ENV.fetch("MYSQL_HOST") %> 
   port: 3306
 
 development:
@@ -58,8 +58,3 @@ production:
 # username: ess
 # password: <%= ENV['ESS_DATABASE_PASSWORD'] %>
 
-# production:
-#  <<: *default
-#  adapter: postgresql
-#  encoding: unicode
-#  pool: 5
