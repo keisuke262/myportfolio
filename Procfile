@@ -1,2 +1,4 @@
-release: bin/rails db:migrate --force
+release: bin/rails db:migrate
+
+
 
