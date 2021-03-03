@@ -16,8 +16,8 @@ jobs:
       environment:
          MYSQL_ALLOW_EMPTY_PASSWORD: 'true'
          MYSQL_HOST: 127.0.0.1
-         MYSQL_USERNAME: <%= ENV["MYSQL_USERNAME"] %>
-         MYSQL_ROOT_PASSWORD: <%= ENV["MYSQL_ROOT_PASSWORD"] %>
+         MYSQL_USERNAME: <%= ENV.fetch("MYSQL_USERNAME", "root") %>
+         MYSQL_ROOT_PASSWORD: <%= ENV.fetch("MYSQL_ROOT_PASSWORD", "password") %>
          MYSQL_DATABASE: ess_test
   
     working_directory: ~/ess  
