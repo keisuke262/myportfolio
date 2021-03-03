@@ -1,2 +1,2 @@
-release: bin/rails db:migrate
+release: rails db:migrate
 
