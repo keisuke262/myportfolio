@@ -77,7 +77,7 @@ jobs:
 workflows:
   version: 2.1
   build-deploy:
-    jobs: 
+    jobs:
       
       - build 
       - deploy:
@@ -85,4 +85,4 @@ workflows:
             - build
           filters:
             branches:
-              only: master 
+              only: master
