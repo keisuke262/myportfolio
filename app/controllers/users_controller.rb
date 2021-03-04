@@ -98,7 +98,7 @@ end
   private
 
   def user_params
-    params.require(:user).permit(:name, :subscription, :movie, :image)
+    params.require(:user).permit(:name, :subscription, :movie, :goal, :image)
   end
 
   def user_params1

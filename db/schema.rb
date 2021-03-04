@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_03_011210) do
+ActiveRecord::Schema.define(version: 2021_03_04_013138) do
 
   create_table "favorites", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "user_id"
@@ -48,6 +48,7 @@ ActiveRecord::Schema.define(version: 2021_03_03_011210) do
     t.datetime "updated_at", null: false
     t.string "subscription"
     t.string "movie"
+    t.string "goal"
   end
 
   add_foreign_key "favorites", "posts"
