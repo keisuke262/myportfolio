@@ -862,10 +862,10 @@ h5 {
 
   .home-content p {
     font-size: 1.125rem;
-    margin: 80px 0 42px;
+    margin: 65px 0 42px;
   }
 
-  #home .page-title {
+  #home .page-title { 
     text-transform: none;
     margin-top: -55px;
   }
