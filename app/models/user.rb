@@ -61,3 +61,12 @@ class User < ApplicationRecord
       self.favoriteposts.include?(post)
     end
   end
+
+  #検索機能のため
+  def self.search(search)
+    if search != ""
+      User.where( 'name Like(?)', "%#{search}%" )
+    else
+      User.all
+    end
+  end

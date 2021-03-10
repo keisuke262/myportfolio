@@ -7,11 +7,11 @@ Rails.application.routes.draw do
   delete 'logout', to: 'sessions#destroy'
   get 'signup', to: 'users#new'
   get 'toppage', to: 'toppages#index' 
-  # No　routeのエラー解消のため追加したが投稿一覧が表示されない
-  # post 'toppage', to: 'toppages#index'
+
   post 'users/:id/followings' => 'users#followings'
   post 'users/:id/followers' => 'users#followers'
   post 'users/:id/favoriteposts' => 'users#favoriteposts'
+
 
 
   # resourcesにはmemberとcollectionという
@@ -24,11 +24,19 @@ Rails.application.routes.draw do
       get :followings
       get :followers
     end
+
+    collection do 
+      get 'search'
+    end
   end
 
   resources :users, only: [:index, :show, :create, :edit, :update, :destroy] do
     member do
       get :favoriteposts
+    end
+
+    collection do
+      get 'search'
     end
   end
 

@@ -11,7 +11,7 @@ jobs:
          BUNDLER_VERSION: 2.0.2
          RAILS_ENV: test
          
-    - image: circleci/mysql:5.7-ram
+    - image: circleci/mysql:8.0-ram
       command: mysqld --default-authentication-plugin=mysql_native_password
       environment:
          MYSQL_ALLOW_EMPTY_PASSWORD: 'true'
