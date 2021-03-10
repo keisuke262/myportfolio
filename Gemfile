@@ -78,6 +78,8 @@ gem 'jquery-rails'
 gem 'jquery-ui-rails'
 
 
+# 検索機能のため
+gem 'ransack'
 
 
 
