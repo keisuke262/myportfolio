@@ -49,7 +49,7 @@ def update
 
   if @user.update(user_params)
     flash[:success] = 'Your profile is updated'
-    redirect_to toppage_url
+    redirect_to user_url
   else
     flash.now[:danger] = 'Failed '
     render :edit
