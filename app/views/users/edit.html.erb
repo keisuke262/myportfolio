@@ -25,40 +25,40 @@
                 </div>
             </div>
             <div class="row change-pro">
-                <div class="col-2 offset-1">
+                <div class="col-5 offset-1 col-sm-2 offset-sm-1">
                     <%= f.label :name, 'Name' %>
                 </div>
-                <div class="col-8 offset-1">
+                <div class="col-5 offset-1 col-sm-8 offset-sm-1">
                     <%= f.text_field :name, class: 'form-control' %>
                 </div>
             </div>
             <div class="row change-pro">
-                <div class="col-2 offset-1">
-                    <%= f.label :goal, 'Goal' %>
-                </div>
-                <div class="col-8 offset-1">
-                    <%= f.text_field :goal, class: 'form-control' %>
-                </div>
-            </div>
-            <div class="row change-pro">
-                <div class="col-2 offset-1">
+                <div class="col-5 offset-1 col-sm-2 offset-sm-1">
                     <%= f.label :subscription, 'Subscription' %>
                 </div>
-                <div class="col-8 offset-1">
+                <div class="col-5 offset-1 col-sm-8 offset-sm-1">
                     <%= f.text_field :subscription, class: 'form-control' %>
                 </div>
             </div>
-            <div class="row change-pro">
-                <div class="col-2 offset-1">
-                    <%= f.label :movie, 'Movie' %>
+            <div class="row change-pro"> 
+                <div class="col-5 offset-1 col-sm-2 offset-sm-1">
+                    <%= f.label :movie, 'The Best Movie' %>
                 </div>
-                <div class="col-8 offset-1">
+                <div class="col-5 offset-1 col-sm-8 offset-sm-1">
                     <%= f.text_field :movie, class: 'form-control' %>
                 </div>
             </div>
             <div class="row change-pro"> 
+                <div class="col-11 offset-1 col-sm-2 offset-sm-1">
+                    <%= f.label :goal, 'Goal', class: "text-center" %>
+                </div>
+                <div class="col-11 offset-1 col-sm-8 offset-sm-1">
+                    <%= f.text_field :goal, class: 'form-control' %>
+                </div>
+            </div>
+            <div class="row change-pro"> 
                 <div class="col-2 offset-1 col-sm-2 offset-sm-4">
-                    <%= link_to 'Cancel', toppage_path, class: 'btn btn-primary btn-sm' %>
+                    <%= link_to 'Cancel', user_path, class: 'btn btn-primary btn-sm' %>
                 </div>
                 <div class="col-2 offset-6 col-sm-2 offset-sm-4">
                     <%= f.submit 'Done', class: 'btn btn-primary btn-sm' %>
