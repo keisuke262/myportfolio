@@ -1,5 +1,31 @@
 <%= render 'layouts/navbar' %>
-<h1 class="text-center all-user">ALL USERS</h1>
+<h1 class="text-center all-user">Search for users</h1>
+<div class="container">
+<div class="row">
+<div class="col-10 offset-2  col-sm-8 offset-sm-4 search-user">
+ 
+<%= search_form_for @q do |f| %>
+    <!-- Search user -->
+    <%= f.label :name, 'Name'%>
+    <%= f.search_field :name_cont, class: "search-form search-name"%><br>
+    <!-- Search Subscription -->
+    <%= f.label :subscription%><br>
+    <%= f.radio_button :subscription_eq, '', {:checked => true} %>Unspecified<br>
+    <%= f.radio_button :subscription_eq, 'Netflix' %>Netflix<br>
+    <%= f.radio_button :subscription_eq, 'Amazon Prime Video' %>Amazon Prime Video<br>
+    <%= f.radio_button :subscription_eq, 'U-NEXT' %>U-NEXT<br>
+    <%= f.radio_button :subscription_eq, 'Hulu', class: "form-mb" %>Hulu<br>
+    <!-- Search The Best Movie -->
+    <%= f.label :movie, 'The Best Movie' %>
+    <%= f.search_field :movie_cont, class: "search-form search-movie" %><br>
+    <%= f.submit 'Search', class: 'btn btn-primary btn-sm' %> 
+
+
+<% end %>
+</div>
+</div>
+</div>
+
 <% if users.any? %>
     <div class="container">
         <div class="row"> 
@@ -27,9 +53,6 @@
                     </div>
                 </div>
             <% end %>
-        </div>
-        <div class="paginate">
-            <%= paginate users %>
         </div>
     </div>
 <% end %>

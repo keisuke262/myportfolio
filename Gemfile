@@ -77,6 +77,10 @@ gem 'factory_bot_rails'
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
 
+#検索機能をつけるため
+gem 'ransack'
+ 
+
 
 
 
