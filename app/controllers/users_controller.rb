@@ -6,9 +6,15 @@ class UsersController < ApplicationController
   before_action :require_user_logged_in, only:[:index, :show, :edit, :followings, :followers]
   before_action :require_user_logged_in, only:[:index, :show, :edit, :favoritemicroposts]
 
+  #def index
+    # ページネーションを適用させるためにpage(params[:page])をつけている
+    #@users = User.order(id: :desc).page(params[:page]).per(6)
+  #end
+
   def index
     # ページネーションを適用させるためにpage(params[:page])をつけている
-    @users = User.order(id: :desc).page(params[:page]).per(6)
+    @q = User.ransack(params[:q])
+    @users = @q.result(distinct: true)
   end
 
   def show
@@ -44,17 +50,17 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
 
-def update
-  @user = User.find(params[:id])
+  def update
+    @user = User.find(params[:id])
 
-  if @user.update(user_params)
-    flash[:success] = 'Your profile is updated'
-    redirect_to user_url
-  else
-    flash.now[:danger] = 'Failed '
-    render :edit
+    if @user.update(user_params)
+      flash[:success] = 'Your profile is updated'
+      redirect_to user_url
+    else
+      flash.now[:danger] = 'Failed '
+      render :edit
+    end
   end
-end
 
   def followings
     @user = User.find(params[:id])
@@ -95,11 +101,6 @@ end
     end
   end
 
-  #検索機能のため
-  def search
-    @user = User.search(params[:search])
-  end
-
   private
 
   def user_params
@@ -110,4 +111,38 @@ end
     params.require(:user).permit(:name, :password, :password_confirmation)
   end
 end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

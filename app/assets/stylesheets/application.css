@@ -212,7 +212,7 @@ h1 {
 }
 
 .btn {
-  font-size: 20px;
+  font-size: 16px;
 }
 
 .signup {
@@ -611,7 +611,30 @@ h5 {
 .profile-intro p {
   margin-bottom: 20px;
 }
+
+.search-form {
+  background-color: #ffffff;
+  margin-bottom: 25px;
+  padding-left: 10px;
+}
+
+.search-user {
+  margin-top: 40px;
+  margin-bottom: 60px;
+}
+
+.search-name {
+  margin-left: 10px;
+}
+
+.search-movie {
+  margin-left: 10px;
+}
  
+.form-mb {
+  margin-bottom: 25px;
+}
+
 /* Desktop版ここまで */
 
 
@@ -1194,6 +1217,15 @@ h5 {
     /* 画像を円形にする設定 */
     border-radius: 50%;
   } 
+ 
+  .search-user {
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+
+  .search-movie {
+    margin-left: 0px;
+  }
 
 } 
   
