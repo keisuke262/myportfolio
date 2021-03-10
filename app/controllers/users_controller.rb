@@ -95,6 +95,11 @@ end
     end
   end
 
+  #検索機能のため
+  def search
+    @user = User.search(params[:search])
+  end
+
   private
 
   def user_params
