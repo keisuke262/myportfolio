@@ -612,9 +612,6 @@ h5 {
   margin-bottom: 20px;
 }
 
-.black {
-  color: black
-}
 
 .search-form {
   background-color: #ffffff;
@@ -641,6 +638,10 @@ h5 {
 
 
  
+.form-mb {
+  margin-bottom: 25px;
+}
+
 /* Desktop版ここまで */
 
 
@@ -1223,6 +1224,15 @@ h5 {
     /* 画像を円形にする設定 */
     border-radius: 50%;
   } 
+ 
+  .search-user {
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+
+  .search-movie {
+    margin-left: 0px;
+  }
 
   .search-user {
     margin-top: 30px;
