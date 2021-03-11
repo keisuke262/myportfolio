@@ -14,7 +14,7 @@
         <div class="col-9 margin-post">
           <%= link_to post.user.name, user_path(post.user)%>
           <span class="text-muted">posted at <%= post.created_at %></span>
-          <div><%= post.content %></div>
+          <div class="black"><%= post.content %></div>
           <div class="row varius-btn">
             <% if current_user == post.user %>
               <div class="col-2">

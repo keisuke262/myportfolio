@@ -13,6 +13,7 @@ class UsersController < ApplicationController
 
   def index
     # ページネーションを適用させるためにpage(params[:page])をつけている
+    # @users = User.order(id: :desc).page(params[:page]).per(6)
     @q = User.ransack(params[:q])
     @users = @q.result(distinct: true)
   end

@@ -10,6 +10,15 @@
     <%= f.search_field :name_cont, class: "search-form search-name"%><br>
     <!-- Search Subscription -->
     <%= f.label :subscription%><br>
+<<<<<<< HEAD
+    <%= f.radio_button :subscription_eq, '', {:checked => true} %><span class="subsc-ml">Unspecified</span><br>
+    <%= f.radio_button :subscription_eq, 'Netflix' %><span class="subsc-ml">Netflix</span><br>
+    <%= f.radio_button :subscription_eq, 'Amazon Prime Video' %><span class="subsc-ml">Amazon Prime Video</span><br>
+    <%= f.radio_button :subscription_eq, 'U-NEXT' %><span class="subsc-ml">U-NEXT</span><br>
+    <%= f.radio_button :subscription_eq, 'Hulu', class: "form-mb" %><span class="subsc-ml">Hulu</span><br>
+    <!-- Search The Best Movie -->
+    <%= f.label :movie, 'The Best Movie' %> 
+=======
     <%= f.radio_button :subscription_eq, '', {:checked => true} %>Unspecified<br>
     <%= f.radio_button :subscription_eq, 'Netflix' %>Netflix<br>
     <%= f.radio_button :subscription_eq, 'Amazon Prime Video' %>Amazon Prime Video<br>
@@ -17,6 +26,7 @@
     <%= f.radio_button :subscription_eq, 'Hulu', class: "form-mb" %>Hulu<br>
     <!-- Search The Best Movie -->
     <%= f.label :movie, 'The Best Movie' %>
+>>>>>>> 8b464e868ffaa3d92533eee02e35bdb306aac2f9
     <%= f.search_field :movie_cont, class: "search-form search-movie" %><br>
     <%= f.submit 'Search', class: 'btn btn-primary btn-sm' %> 
 

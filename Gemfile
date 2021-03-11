@@ -82,6 +82,13 @@ gem 'ransack'
  
 
 
+# 検索機能のため
+gem 'ransack'
+
+
+
+
+
 
 
 
