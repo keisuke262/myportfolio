@@ -642,6 +642,10 @@ h5 {
   margin-bottom: 25px;
 }
 
+.subsc-ml {
+  margin-left: 10px;
+}
+
 /* Desktop版ここまで */
 
 
@@ -1181,7 +1185,7 @@ h5 {
   }
 
   .change-photo {
-    margin-left: 50px;
+    margin-left: 25px;
   }
 
  
