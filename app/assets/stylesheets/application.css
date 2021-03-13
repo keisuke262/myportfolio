@@ -637,9 +637,16 @@ h5 {
 }
 
 
- 
 .form-mb {
   margin-bottom: 25px;
+} 
+
+.subsc-ml {
+  margin-left: 10px;
+}
+
+.subsc-ml {
+  margin-left: 10px;
 }
 
 /* Desktop版ここまで */
@@ -963,7 +970,7 @@ h5 {
   }
 
   .btn {
-    font-size: 15px;
+    font-size: 12px;
   }
 
   .name {
@@ -1181,10 +1188,9 @@ h5 {
   }
 
   .change-photo {
-    margin-left: 50px;
+    margin-left: 0px
   }
 
- 
   .follower {
     margin-left: 55px;
     margin-top: 25px;
@@ -1208,7 +1214,7 @@ h5 {
   }
   
   .done {
-    margin-left: 5px;
+    margin-left: 2px; 
   }
 
   .user-pro-img {
@@ -1269,7 +1275,7 @@ h5 {
    }
 
    .btn {
-     font-size: 13px;
+     font-size: 11px;
    }
 
    .border-bottom .btn {
@@ -1795,7 +1801,7 @@ li {
 @media only screen and (min-width: 0px) {
   
   .edit-content {
-    padding: 60px 10px;
+    padding: 30px 10px;
     margin-bottom: 20px;
     font-size: 23px;
   }
