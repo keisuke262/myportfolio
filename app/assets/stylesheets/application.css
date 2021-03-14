@@ -1181,12 +1181,17 @@ h5 {
 
   .edit-profile {
     margin-top: 83px
-  } 
+  }
  
   .change-pro {
     margin-top: 20px;
   }
 
+  .change-photo {
+    margin-left: 0px;
+  }
+
+ 
   .follower {
     margin-left: 55px;
     margin-top: 25px;
