@@ -649,6 +649,10 @@ h5 {
   margin-left: 10px;
 }
 
+.edit-done {
+  margin-left: 100px;
+}
+
 /* Desktop版ここまで */
 
 
@@ -1188,7 +1192,7 @@ h5 {
   }
 
   .change-photo {
-    margin-left: 0px;
+    margin-left: 50px;
   }
 
  
@@ -1226,8 +1230,8 @@ h5 {
   }
 
   .border-bottom .user-pro-img {
-    width: 75px;
-    height: 75px;
+    width: 60px;
+    height: 60px;
     /* 画像を円形にする設定 */
     border-radius: 50%;
   } 
@@ -1250,6 +1254,10 @@ h5 {
     margin-left: 0px;
   }
 
+  .edit-done {
+    margin-left: 22px;
+  }
+
 } 
   
 /* mobile版ここまで */
@@ -1270,18 +1278,32 @@ h5 {
 
   /* like unlike button */
   .like-unlike-button .btn {
-    font-size: 15px;
+    font-size: 10px;
     border-radius: .2rem;  
     margin-left: 0px;
-   }
+   }  
 
+  
    .btn {
-     font-size: 11px;
+     font-size: 10px;
+     padding-left: 10px;
    }
 
    .border-bottom .btn {
      margin-left: 18px;
    }
+
+   .edit-done {
+    margin-left: 15px;
+  }
+
+  .mobile-mini-follow {
+    margin-left: 10px;
+  }
+
+  .mobile-mini-follower {
+    margin-left: 40px;
+  }
 
    
 }
