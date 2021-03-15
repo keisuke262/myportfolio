@@ -1,27 +1,26 @@
 <%= render 'layouts/navbar' %>
 <h1 class="text-center all-user">Search for users</h1>
 <div class="container">
-<div class="row">
-<div class="col-10 offset-2  col-sm-8 offset-sm-4 search-user">
- 
-<%= search_form_for @q do |f| %>
-    <!-- Search user -->
-    <%= f.label :name, 'Name'%>
-    <%= f.search_field :name_cont, class: "search-form search-name"%><br>
-    <!-- Search Subscription -->
-    <%= f.label :subscription%><br>
-    <%= f.radio_button :subscription_eq, '', {:checked => true} %><span class="subsc-ml">Unspecified</span><br>
-    <%= f.radio_button :subscription_eq, 'Netflix' %><span class="subsc-ml">Netflix</span><br>
-    <%= f.radio_button :subscription_eq, 'Amazon Prime Video' %><span class="subsc-ml">Amazon Prime Video</span><br>
-    <%= f.radio_button :subscription_eq, 'U-NEXT' %><span class="subsc-ml">U-NEXT</span><br>
-    <%= f.radio_button :subscription_eq, 'Hulu', class: "form-mb" %><span class="subsc-ml">Hulu</span><br>
-    <!-- Search The Best Movie -->
-    <%= f.label :movie, 'The Best Movie' %> 
-    <%= f.search_field :movie_cont, class: "search-form search-movie" %><br>
-    <%= f.submit 'Search', class: 'btn btn-primary btn-sm' %> 
-<% end %>
-</div>
-</div>
+    <div class="row">
+        <div class="col-10 offset-2  col-sm-8 offset-sm-4 search-user">
+            <%= search_form_for @q do |f| %>
+                <!-- Search user -->
+                <%= f.label :name, 'Name'%>
+                <%= f.search_field :name_cont, class: "search-form search-name"%><br>
+                <!-- Search Subscription -->
+                <%= f.label :subscription%><br>
+                <%= f.radio_button :subscription_eq, '', {:checked => true} %><span class="subsc-ml">Unspecified</span><br>
+                <%= f.radio_button :subscription_eq, 'Netflix' %><span class="subsc-ml">Netflix</span><br>
+                <%= f.radio_button :subscription_eq, 'Amazon Prime Video' %><span class="subsc-ml">Amazon Prime Video</span><br>
+                <%= f.radio_button :subscription_eq, 'U-NEXT' %><span class="subsc-ml">U-NEXT</span><br>
+                <%= f.radio_button :subscription_eq, 'Hulu', class: "form-mb" %><span class="subsc-ml">Hulu</span><br>
+                <!-- Search The Best Movie -->
+                <%= f.label :movie, 'The Best Movie' %> 
+                <%= f.search_field :movie_cont, class: "search-form search-movie" %><br>
+                <%= f.submit 'Search', class: 'btn btn-primary btn-sm' %> 
+            <% end %>
+        </div>
+    </div>
 </div>
 
 <% if users.any? %>

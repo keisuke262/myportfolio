@@ -6,13 +6,11 @@ Rails.application.routes.draw do
   post 'login', to: 'sessions#create'
   delete 'logout', to: 'sessions#destroy'
   get 'signup', to: 'users#new'
-  get 'toppage', to: 'toppages#index' 
+  # get 'toppage', to: 'toppages#index' 
 
   post 'users/:id/followings' => 'users#followings'
   post 'users/:id/followers' => 'users#followers'
   post 'users/:id/favoriteposts' => 'users#favoriteposts'
-
-
 
   # resourcesにはmemberとcollectionという
   # URLを深堀するオプションを付与することができる
@@ -24,23 +22,15 @@ Rails.application.routes.draw do
       get :followings
       get :followers
     end
-
-    collection do 
-      get 'search'
-    end
   end
 
   resources :users, only: [:index, :show, :create, :edit, :update, :destroy] do
     member do
       get :favoriteposts
     end
-
-    collection do
-      get 'search'
-    end
   end
 
-  resources :posts, only: [:create, :destroy, :edit, :update]
+  resources :posts, only: [:index, :create, :destroy, :edit, :update]
   # Userがfollow, unfollowできるために必要なRouting
   # なぜならfollow, unfollowするとは中間テーブルを保存 or 削除することであるから
   resources :relationships, only: [:create, :destroy]

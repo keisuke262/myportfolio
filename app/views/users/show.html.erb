@@ -32,12 +32,12 @@
         <div class="col-2 posts-ml">
             <%= @count_posts %>Posts 
         </div>
-        <div class="col-2">
+        <div class="col-2 mobile-mini-follow">
             <%= link_to followings_user_path(@user) do %>
                 <%= @count_followings %>Following
             <% end %>
         </div>
-        <div class="col-2 offset-1">
+        <div class="col-2 offset-1 mobile-mini-follower">
             <%= link_to followers_user_path(@user) do %>
                 <%= @count_followers %>Followers
             <% end %>

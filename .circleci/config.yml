@@ -6,13 +6,13 @@ orbs:
 jobs:
   build:
     docker:
-    - image: circleci/ruby:2.5.3-node-browsers-legacy
+    - image: circleci/ruby:2.5.3
       environment:
          BUNDLER_VERSION: 2.1.4
          RAILS_ENV: test
          TZ: "Japan"
          
-    - image: circleci/mysql:8.0.19-ram
+    - image: circleci/mysql:8.0-ram
       command: [--default-authentication-plugin=mysql_native_password]
       environment:
          MYSQL_ALLOW_EMPTY_PASSWORD: 'true'
@@ -50,8 +50,8 @@ jobs:
     - run:
         name: Database setup
         command: |
-           bundle exec rake db:create
-           bundle exec rake db:schema:load
+           bundle exec rails db:create
+           bundle exec rails db:schema:load
 
     # run tests! (RSpec)
     - run:

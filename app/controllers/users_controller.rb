@@ -6,14 +6,7 @@ class UsersController < ApplicationController
   before_action :require_user_logged_in, only:[:index, :show, :edit, :followings, :followers]
   before_action :require_user_logged_in, only:[:index, :show, :edit, :favoritemicroposts]
 
-  #def index
-    # ページネーションを適用させるためにpage(params[:page])をつけている
-    #@users = User.order(id: :desc).page(params[:page]).per(6)
-  #end
-
   def index
-    # ページネーションを適用させるためにpage(params[:page])をつけている
-    # @users = User.order(id: :desc).page(params[:page]).per(6)
     @q = User.ransack(params[:q])
     @users = @q.result(distinct: true)
   end
