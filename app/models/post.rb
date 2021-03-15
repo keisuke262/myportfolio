@@ -4,7 +4,9 @@ class Post < ApplicationRecord
   # また、posts.userである投稿に紐づいたUserを取得できる
   belongs_to :user
   has_many :favorites, dependent: :destroy
-  validates :content, presence: true  #, length: { maximum: 500 }
+  has_many :tag_maps, dependent: :destroy
+  has_many :tags, through: :tag_maps 
+  validates :content, presence: true 
 end
 
 

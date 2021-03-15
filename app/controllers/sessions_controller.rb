@@ -13,7 +13,7 @@ class SessionsController < ApplicationController
     password = params[:session][:password]
     if login(name, password)
       flash[:success] = 'Successfully logged in !'
-      redirect_to toppage_url
+      redirect_to posts_url
     else
       flash.now[:danger] = 'Failed'
       render :new

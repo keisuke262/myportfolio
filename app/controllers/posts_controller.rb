@@ -1,16 +1,31 @@
 class PostsController < ApplicationController
   before_action :require_user_logged_in
-  before_action :correct_user, only: [:destroy]
+  before_action :correct_user, only: :destroy
+  
+  def index
+    if logged_in?
+    # form_with用
+    # 投稿するフォームを設置するから
+    # @postにカラのインスタンスを代入しておく
+    # form_with(model: @post)として使用する
+      @post = current_user.posts.build
+      @q = Post.ransack(params[:q])
+      @q.sorts = ['updated_at desc', 'id desc'] if @q.sorts.empty?
+      @posts = @q.result(distinct: true)
+    end
+  end
 
   def create
     @post = current_user.posts.build(post_params)
     if @post.save
       flash[:success] = 'Your Post is sent'
-      redirect_to toppage_url
+      redirect_to posts_url
     else  
-      @posts = current_user.feed_posts.order(id: :desc).page(params[:page])
+      @q = Post.ransack(params[:q])
+      @q.sorts = ['updated_at desc', 'id desc'] if @q.sorts.empty?
+      @posts = @q.result(distinct: true)
       flash.now[:danger] = 'Failed'
-      render 'toppages/index'
+      render 'posts/index'
     end
   end
 
@@ -23,7 +38,7 @@ class PostsController < ApplicationController
     # redirect_backはアクションが実行されたページに戻る
     # fallback_locationは保険的なもので、戻るべき
     # 場所が見つからない時に、戻る場所を指定するもの。
-    redirect_to toppage_url
+    redirect_to posts_url
   end
 
   def edit
@@ -35,7 +50,7 @@ class PostsController < ApplicationController
 
     if @post.update(post_params)
       flash[:success] = 'Your Post is updated'
-      redirect_to toppage_url
+      redirect_to posts_url
     else
       flash.now[:danger] = 'Failed '
       render :edit
@@ -53,10 +68,10 @@ class PostsController < ApplicationController
     # 自分の投稿であるか確かめる
     # 他の人の投稿を勝手に消してしまえる設定はNG
     # もし自分のでなければdestroyアクションは実行せずに、
-    # toppagesに戻るようにしている
+    # postsに戻るようにしている
     @post = current_user.posts.find_by(id: params[:id])
     unless @post
-      redirect_to toppage_url
+      redirect_to posts_url
     end
   end
 end

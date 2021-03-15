@@ -12,7 +12,7 @@ class ApplicationController < ActionController::Base
 
     def require_user_logged_in
         unless logged_in?
-            redirect_to toppage_url
+            redirect_to posts_url
         end
     end
 

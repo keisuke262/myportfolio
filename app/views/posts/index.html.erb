@@ -1,0 +1,68 @@
+<% if logged_in? %>
+    <%= render 'layouts/navbar' %>
+    <h1 class="text-center all-phrases">Search for phrases</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-11 offset-1  col-sm-8 offset-sm-4 search-phrase">
+                <%= search_form_for @q do |f| %> 
+                    <%= f.label :content, "Phrase" %> 
+                    <%= f.search_field :content_cont, class: 'search-form' %>
+                    <%= f.submit "Search", class: 'btn btn-primary btn-sm' %>
+                <% end %>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-10 offset-sm-1 search-phrase">
+                <div class="post-modal-toppage">
+                    <!-- modal open -->
+                    <h5 class="text-center post">Share Phrases</h5>
+                    <p class="text-center post"><a class="js-modal-open" href="" data-target="modal01">Post</a></p>
+                </div>
+                <!-- modal -->
+                <div id="modal01" class="c-modal js-modal">
+                    <div class="c-modal_bg js-modal-close"></div>
+                    <div class="c-modal_content _lg">
+                        <div class="c-modal_content_inner text-center post">
+                            <p>Share your favorite phrase</p>
+                            <%= form_with(model: @post, local: true) do |f| %>
+                                <div class="form-group">
+                                    <%= f.text_area :content, class: 'form-control', rows: 5 %>
+                                </div>
+                                <%= f.submit 'Post', class: 'btn btn-primary btn-block' %>
+                            <% end %>
+                            <a class="js-modal-close c-modal_close" href=""><span>close</span></a>
+                        </div>
+                    </div>
+                </div>
+                <!--modalここまで-->
+                <%= render 'posts/posts', posts: @posts  %>
+            </div>
+        </div>
+    </div>
+    
+    
+    <% else %>
+    <h1 class="text-center account">Create your account</h1>
+    <div class="row">
+      <div class="col-sm-6 offset-sm-3">
+        <%= form_with(model: @user, local: true) do |f| %>
+          <%= render 'layouts/error_messages', model: f.object %>
+          <div class="form-group name">
+            <%= f.label :name, 'Name (You can always change it later)' %>
+            <%= f.text_field :name, class: 'form-control' %>
+          </div>
+          <div class="form-group password">
+            <%= f.label :password, 'Password (Make sure it is 8 character or more)' %>
+            <%= f.password_field :password, class: 'form-control' %>
+          </div>
+          <div class="form-group passwordcon">
+            <%= f.label :password_confirmation, 'Confirmation' %>
+            <%= f.password_field :password_confirmation, class: 'form-control' %>
+          </div>
+          <%= f.submit 'Sign up', class: 'btn btn-primary btn-block signup' %>
+        <% end %>
+      </div>
+    </div>
+<% end %>

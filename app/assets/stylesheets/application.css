@@ -557,6 +557,10 @@ h5 {
   margin-top: 110px;
 }
 
+.all-phrases {
+  margin-top: 110px;
+}
+
 .border-bottm {
   border-bottom: solid 1px;
 }
@@ -567,7 +571,7 @@ h5 {
 
 /* like unlike button */
 .like-unlike-button .btn {
-  font-size: 20px;
+  font-size: 16px;
   border-radius: .2rem;  
   margin-left: 0px;
  }
@@ -622,6 +626,11 @@ h5 {
 .search-user {
   margin-top: 40px;
   margin-bottom: 60px;
+}
+
+.search-phrase {
+  margin-top: 40px;
+  margin-bottom: -75px;
 }
 
 .search-name {
@@ -743,7 +752,7 @@ h5 {
 
   /* like unlike button */
   .like-unlike-button .btn {
-    font-size: 20px;
+    font-size: 16px;
     border-radius: .2rem;  
     margin-left: 0px;
   }
@@ -844,7 +853,7 @@ h5 {
 
   /* like unlike button */
   .like-unlike-button .btn {
-    font-size: 20px;
+    font-size: 16px;
     border-radius: .2rem;  
     margin-left: 0px;
   }
@@ -1091,7 +1100,7 @@ h5 {
     box-sizing: border-box;
     overflow: hidden;
     border-radius: 60px;
-    margin: 100px auto 40px;
+    margin: 75px auto 40px;
   }
 
   .post-modal-toppage p {
@@ -1137,7 +1146,7 @@ h5 {
 
   /* like unlike button */
   .like-unlike-button .btn {
-   font-size: 15px;
+   font-size: 12px;
    border-radius: .2rem;  
    margin-left: -14px;
   }
@@ -1241,13 +1250,13 @@ h5 {
     margin-bottom: 20px;
   }
 
-  .search-movie {
-    margin-left: 0px;
+  .search-phrase {
+    margin-top: 30px;
+    margin-bottom: -50px;
   }
 
-  .search-user {
-    margin-top: 30px;
-    margin-bottom: 20px;
+  .search-movie {
+    margin-left: 0px;
   }
 
   .search-movie {
